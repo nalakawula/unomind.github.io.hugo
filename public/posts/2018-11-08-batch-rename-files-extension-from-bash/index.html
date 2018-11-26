@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title"></div>
+
+        
+<div class="section" id="content">
+    Fri Apr 14, 2017 &#183; 202 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Untuk suatu keperluan, terkadang kita perlu melakukan <strong>batch</strong> rename untuk banyak file. Dalam kasus ini saya ingin rename file dengan ekstensi yang seragam, dan outputnya juga seragam. Yaitu *.log menjadi *.md.</p>
+
+<p>Untuk praktik, kita bisa membuat file yang banyak terlebih dahulu, misalnya 1.log - 50.log</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mkdir latihan
+
+cd latihan</code></pre></div>
+<p>jalankan skrip dibawah ini, untuk membuat file 1.log - 50.log. Jadi nanti akan ada 50 file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span><span style="color:#ae81ff">1</span>..50<span style="color:#f92672">}</span>; <span style="color:#66d9ef">do</span> touch $i.log; <span style="color:#66d9ef">done</span> </code></pre></div>
+<p>kalau di <code>ls</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">[</span>orangtua@mesintua latihan<span style="color:#f92672">]</span>$ ls
+<span style="color:#ae81ff">10</span>.log  <span style="color:#ae81ff">13</span>.log  <span style="color:#ae81ff">16</span>.log  <span style="color:#ae81ff">19</span>.log  <span style="color:#ae81ff">21</span>.log  <span style="color:#ae81ff">24</span>.log  <span style="color:#ae81ff">27</span>.log  <span style="color:#ae81ff">2</span>.log   <span style="color:#ae81ff">32</span>.log  <span style="color:#ae81ff">35</span>.log  <span style="color:#ae81ff">38</span>.log  <span style="color:#ae81ff">40</span>.log  <span style="color:#ae81ff">43</span>.log  <span style="color:#ae81ff">46</span>.log  <span style="color:#ae81ff">49</span>.log  <span style="color:#ae81ff">5</span>.log  <span style="color:#ae81ff">8</span>.log
+<span style="color:#ae81ff">11</span>.log  <span style="color:#ae81ff">14</span>.log  <span style="color:#ae81ff">17</span>.log  <span style="color:#ae81ff">1</span>.log   <span style="color:#ae81ff">22</span>.log  <span style="color:#ae81ff">25</span>.log  <span style="color:#ae81ff">28</span>.log  <span style="color:#ae81ff">30</span>.log  <span style="color:#ae81ff">33</span>.log  <span style="color:#ae81ff">36</span>.log  <span style="color:#ae81ff">39</span>.log  <span style="color:#ae81ff">41</span>.log  <span style="color:#ae81ff">44</span>.log  <span style="color:#ae81ff">47</span>.log  <span style="color:#ae81ff">4</span>.log   <span style="color:#ae81ff">6</span>.log  <span style="color:#ae81ff">9</span>.log
+<span style="color:#ae81ff">12</span>.log  <span style="color:#ae81ff">15</span>.log  <span style="color:#ae81ff">18</span>.log  <span style="color:#ae81ff">20</span>.log  <span style="color:#ae81ff">23</span>.log  <span style="color:#ae81ff">26</span>.log  <span style="color:#ae81ff">29</span>.log  <span style="color:#ae81ff">31</span>.log  <span style="color:#ae81ff">34</span>.log  <span style="color:#ae81ff">37</span>.log  <span style="color:#ae81ff">3</span>.log   <span style="color:#ae81ff">42</span>.log  <span style="color:#ae81ff">45</span>.log  <span style="color:#ae81ff">48</span>.log  <span style="color:#ae81ff">50</span>.log  <span style="color:#ae81ff">7</span>.log</code></pre></div>
+<p>Sekarang saatnya batch rename:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">for</span> file in *.log; <span style="color:#66d9ef">do</span> mv <span style="color:#e6db74">&#34;</span>$file<span style="color:#e6db74">&#34;</span> <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>basename <span style="color:#e6db74">&#34;</span>$file<span style="color:#e6db74">&#34;</span> .log<span style="color:#66d9ef">)</span><span style="color:#e6db74">.md&#34;</span>; <span style="color:#66d9ef">done</span></code></pre></div>
+<p>Kalau di <code>ls</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#f92672">[</span>orangtua@mesintua latihan<span style="color:#f92672">]</span>$ ls
+<span style="color:#ae81ff">10</span>.md  <span style="color:#ae81ff">13</span>.md  <span style="color:#ae81ff">16</span>.md  <span style="color:#ae81ff">19</span>.md  <span style="color:#ae81ff">21</span>.md  <span style="color:#ae81ff">24</span>.md  <span style="color:#ae81ff">27</span>.md  <span style="color:#ae81ff">2</span>.md   <span style="color:#ae81ff">32</span>.md  <span style="color:#ae81ff">35</span>.md  <span style="color:#ae81ff">38</span>.md  <span style="color:#ae81ff">40</span>.md  <span style="color:#ae81ff">43</span>.md  <span style="color:#ae81ff">46</span>.md  <span style="color:#ae81ff">49</span>.md  <span style="color:#ae81ff">5</span>.md  <span style="color:#ae81ff">8</span>.md
+<span style="color:#ae81ff">11</span>.md  <span style="color:#ae81ff">14</span>.md  <span style="color:#ae81ff">17</span>.md  <span style="color:#ae81ff">1</span>.md   <span style="color:#ae81ff">22</span>.md  <span style="color:#ae81ff">25</span>.md  <span style="color:#ae81ff">28</span>.md  <span style="color:#ae81ff">30</span>.md  <span style="color:#ae81ff">33</span>.md  <span style="color:#ae81ff">36</span>.md  <span style="color:#ae81ff">39</span>.md  <span style="color:#ae81ff">41</span>.md  <span style="color:#ae81ff">44</span>.md  <span style="color:#ae81ff">47</span>.md  <span style="color:#ae81ff">4</span>.md   <span style="color:#ae81ff">6</span>.md  <span style="color:#ae81ff">9</span>.md
+<span style="color:#ae81ff">12</span>.md  <span style="color:#ae81ff">15</span>.md  <span style="color:#ae81ff">18</span>.md  <span style="color:#ae81ff">20</span>.md  <span style="color:#ae81ff">23</span>.md  <span style="color:#ae81ff">26</span>.md  <span style="color:#ae81ff">29</span>.md  <span style="color:#ae81ff">31</span>.md  <span style="color:#ae81ff">34</span>.md  <span style="color:#ae81ff">37</span>.md  <span style="color:#ae81ff">3</span>.md   <span style="color:#ae81ff">42</span>.md  <span style="color:#ae81ff">45</span>.md  <span style="color:#ae81ff">48</span>.md  <span style="color:#ae81ff">50</span>.md  <span style="color:#ae81ff">7</span>.md</code></pre></div>
+<p>Semoga bermanfaat</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

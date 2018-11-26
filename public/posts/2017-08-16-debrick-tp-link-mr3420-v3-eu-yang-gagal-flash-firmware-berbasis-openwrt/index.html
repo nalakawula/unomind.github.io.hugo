@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Debrick TP-Link MR3420-v3-EU yang Gagal Flash Firmware Berbasis OpenWRT
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Debrick TP-Link MR3420-v3-EU yang Gagal Flash Firmware Berbasis OpenWRT</div>
+
+        
+<div class="section" id="content">
+    Wed Aug 16, 2017 &#183; 260 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Setelah saya berhasil flash <a href="http://pulpstone.pw">pulpstone</a>, saya penasaran dengan firmware keluaran <a href="https://ofmodemsandmen">ofmodemsandmen</a> yaitu <code>GoldenOrb</code>. Saya cek disana, ternyata ada untuk TP-LINK MR3420 V3, hanya saja tidak jelas bisa untuk versi EU atau tidak.</p>
+
+<p>Modal nekat, coba flash pakai <code>mtd</code>, eh ternyata routernya K.O. Led indikator tidak menyala sama sekali.</p>
+
+<p>Dengan harapan si router masih bernyawa, saya mencoba mengubungkan port wan ke laptop, menekan dan menahan tombol reset 5-10 detik, kemudian menekan tombol ON pada router, led indikator LAN di laptop berkedip, wah ada komunikasi. Akhirnya saya gunakan <code>wireshark</code> untuk menangkap informasi dari port lan.</p>
+
+<p>Dari informasi yang ditangkap <code>wireshark</code> saya baca baris demi baris, ada informasi berikut ini:</p>
+
+<ol>
+<li>Who has <code>192.168.0.66</code>? Tell <code>192.168.0.86</code>.</li>
+<li>Read Request, File: <code>mr3420v3_tp_recovery.bin</code>, Tansfer type: octet, timeout=2. Dengan protokol <code>tftp</code>.</li>
+</ol>
+
+<p>Wow, ternyata router saya masih hidup. Dari informasi diatas dapat disimpulkan sebagai berikut:</p>
+
+<ol>
+<li>Router menggunakan IP 192.168.0.86 pada port wan.</li>
+<li>Router mencari IP 192.168.0.66.</li>
+<li>Router mencari file dengan nama <code>mr3420v3_tp_recovery.bin</code> yang akan diambil pakai protokol <code>tftp</code></li>
+</ol>
+
+<p>Dari situ, kita cukup turuti kemauan si router.</p>
+
+<ol>
+<li>Set IP Address komputer kita menjadi 192.168.0.66</li>
+<li>Siapkan <code>tftp server</code> pada komputer kita, terserah pakai program apa, sesuaikan dengan OS.</li>
+<li>Download firmware original dari TP-Link dan rename menjadi <code>mr3420v3_tp_recovery.bin</code> kemudian taruh di direktori root tftp server.</li>
+<li>Matikan router.</li>
+<li>Tekan dan tahan tombol reset pada router.</li>
+<li>Tekan tombol ON pada router.</li>
+<li>Tunggu 5-10 detik kemudian lepaskan tombol reset.</li>
+<li>Cek log tftp server, apakah ada komunikasi dari router, kalau ada, biarkan saja.</li>
+<li>Tunggu 1-5 menit sampai router reboot otomatis.</li>
+<li>Jreng jreng, router hidup lagi.</li>
+<li>Login ke dashboard TP-Link dengan <code>user: admin</code> dan <code>pass: admin</code></li>
+<li>Selesai.</li>
+</ol>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

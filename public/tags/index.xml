@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Sumarsono</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Nov 2018 12:01:56 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 27 Sep 2017 19:39:08 +0700</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,45 +14,9 @@
     <item>
       <title>Blog</title>
       <link>/tags/blog/</link>
-      <pubDate>Sat, 17 Nov 2018 12:01:56 +0700</pubDate>
+      <pubDate>Wed, 27 Sep 2017 19:39:08 +0700</pubDate>
       
       <guid>/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Classic</title>
-      <link>/tags/classic/</link>
-      <pubDate>Sun, 11 Feb 2018 12:34:41 -0500</pubDate>
-      
-      <guid>/tags/classic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Code</title>
-      <link>/tags/code/</link>
-      <pubDate>Thu, 08 Mar 2018 20:18:53 -0500</pubDate>
-      
-      <guid>/tags/code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Poem</title>
-      <link>/tags/poem/</link>
-      <pubDate>Tue, 13 Feb 2018 13:56:12 -0500</pubDate>
-      
-      <guid>/tags/poem/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Story</title>
-      <link>/tags/story/</link>
-      <pubDate>Sat, 17 Nov 2018 12:01:56 +0700</pubDate>
-      
-      <guid>/tags/story/</guid>
       <description></description>
     </item>
     

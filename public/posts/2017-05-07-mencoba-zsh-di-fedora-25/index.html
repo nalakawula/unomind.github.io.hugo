@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Mencoba Zsh di Fedora 25
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Mencoba Zsh di Fedora 25</div>
+
+        
+<div class="section" id="content">
+    Sun May 07, 2017 &#183; 93 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Berawal dari perbincangan di group telegram, Saya jadi ingin mencoba (lagi) <code>ZSH</code> untuk menggantikan <code>BASH</code>. Salah satu yang saya suka dari ZSH adalah tampilannya yang menarik, ditambah lagi dengan adanya <code>Oh My Zsh</code>.</p>
+
+<p>Mengganti BASH dengan ZSH di Fedora 25 terbilang cukup mudah, berikut ini caranya:</p>
+
+<ul>
+<li>Install paket <code>zsh</code> dan <code>util-linux-user</code>. Dari <code>util-linux-user</code> kita butuh <code>chsh</code> untuk me-replace bash dengan zsh.</li>
+</ul>
+
+<pre><code>sudo dnf install zsh util-linux-user
+</code></pre>
+
+<ul>
+<li>Ganti bash menjadi zsh dengan cara:</li>
+</ul>
+
+<pre><code>chsh -s /usr/bin/zsh
+</code></pre>
+
+<ul>
+<li>Tutup terminal dan buka lagi, <code>bash</code> sudah tergantikan oleh <code>zsh</code></li>
+</ul>
+
+<p>Nah, next time kita bahas <code>oh my zsh</code>.</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

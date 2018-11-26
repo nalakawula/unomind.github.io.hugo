@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title"></div>
+
+        
+<div class="section" id="content">
+    Fri Apr 14, 2017 &#183; 186 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Pada artikel <a href="{{ site.baseurl }}{% post_url 2017-04-18-menambah-tombol-navigasi-next-archive-previous-di-jekyll %}">sebelumnya</a>, sudah ditulis caranya. Namun, saya kurang puas dengan hasilnya.</p>
+
+<p>Nah, suatu ketika saya berkunjung ke blog teman, navigasinya bagus eui.. bentuknya tombol. Kemudian saya putuskan untuk meniru dari blog teman saya. Berikut ini source code nya:
+{% raw %}</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;page-navigation&#34;</span>&gt;
+      &lt;<span style="color:#f92672">ul</span>&gt;
+      {% if page.previous %}
+        &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;previous&#34;</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{page.previous.url}}&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ page.previous.title }}&#34;</span>&gt;&amp;larr; Previous&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+      {% else %}
+        &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;previous disabled&#34;</span>&gt;&lt;<span style="color:#f92672">a</span>&gt;&amp;larr; Previous&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+      {% endif %}
+        &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{site.baseurl}}/archive/&#34;</span>&gt;Archive&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+      {% if page.next %}
+        &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;next&#34;</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{page.next.url}}&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ page.next.title }}&#34;</span>&gt;Next &amp;rarr;&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+      {% else %}
+        &lt;<span style="color:#f92672">li</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;next disabled&#34;</span>&gt;&lt;<span style="color:#f92672">a</span>&gt;Next &amp;rarr;&lt;/<span style="color:#f92672">a</span>&gt;
+      {% endif %}
+      &lt;/<span style="color:#f92672">ul</span>&gt;
+ &lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+<p>{% endraw %}</p>
+
+<p>nah berikut ini kode &lsquo;css&rsquo; biar jadi cantik
+{% raw %}</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">page-navigation</span> {
+    <span style="color:#66d9ef">height</span>:<span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">18</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
+    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+}
+.<span style="color:#a6e22e">page-navigation</span> <span style="color:#f92672">ul</span> {
+    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>;
+    <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">border</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#ddd</span>;
+    <span style="color:#66d9ef">border</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> rgba(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0.15</span>);
+    <span style="color:#66d9ef">border-radius</span>:<span style="color:#ae81ff">3</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">box-shadow</span>:<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0.05</span>);
+    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+
+}
+
+.<span style="color:#a6e22e">page-navigation</span> <span style="color:#f92672">li</span> {
+    <span style="color:#66d9ef">display</span>:<span style="color:#66d9ef">inline</span>
+}
+.<span style="color:#a6e22e">page-navigation</span> <span style="color:#f92672">a</span> {
+    <span style="color:#66d9ef">float</span>:<span style="color:#66d9ef">left</span>;
+    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span> <span style="color:#ae81ff">14</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">line-height</span>:<span style="color:#ae81ff">34</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">border-right</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span>;
+    <span style="color:#66d9ef">border-right-color</span>:<span style="color:#ae81ff">#ddd</span>;
+    <span style="color:#66d9ef">border-right-color</span>:rgba(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">.15</span>)
+}
+.<span style="color:#a6e22e">page-navigation</span> <span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {
+    <span style="color:#66d9ef">background-color</span>:<span style="color:#ae81ff">#eee</span>
+}
+.<span style="color:#a6e22e">page-navigation</span> .<span style="color:#a6e22e">disabled</span> <span style="color:#f92672">a</span><span style="color:#f92672">,</span>.<span style="color:#a6e22e">page-navigation</span> .<span style="color:#a6e22e">disabled</span> <span style="color:#f92672">a</span>:<span style="color:#a6e22e">hover</span> {
+    <span style="color:#66d9ef">background-color</span>:<span style="color:#66d9ef">transparent</span>;
+    <span style="color:#66d9ef">color</span>:<span style="color:#ae81ff">#968896</span>
+}
+.<span style="color:#a6e22e">page-navigation</span> .<span style="color:#a6e22e">next</span> <span style="color:#f92672">a</span> {
+    <span style="color:#66d9ef">border</span>:<span style="color:#ae81ff">0</span>
+}</code></pre></div>
+<p>{% endraw %}</p>
+
+<p>Hasilnya, seperti yang anda lihat di bawah post ini. :+1:</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

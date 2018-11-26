@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title"></div>
+
+        
+<div class="section" id="content">
+    Fri Apr 14, 2017 &#183; 155 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Microsoft Office 2010 yang saya pasang dengan bantuan Wine, <em>so far so good</em>. Fungsi-fungsi yang saya butuhkan berjalan sebagaimana mestinya. Tapi, ada sesuatu yang aneh walaupun tidak mengganggu pekerjaan, yaitu Aplikasi MSO tidak bisa di resize menggunakan tombol resize di <em>tittle bar</em>. Misal saya buka Ms Word, ketika saya klik resize maka akan mengecil, ketika saya klik rezie sekali lagi, tidak terjadi apa-apa, seharusnya jadi maximize.</p>
+
+<p>Ternyata, hal tersebut berkaitan dengan window manager dari DE. Berhubung saat ini saya menggunakan KDE, maka solusinya adalah sebagai berikut:
+1. Buka <strong>System Settings</strong>
+2. Dari <strong>System Setttings</strong> buka <strong>Window Managements</strong>
+3. Setelah <strong>Window Management</strong> terbuka, Klik _<em>Window Rules</em> &gt; <strong>New..</strong>
+4. Pada kolom isian <em>Description</em>, isilah nama untuk rule yang akan dibuat
+5. <strong>Window Class (Application)</strong>: Pilih regular expression dan isi dengan <code>.*\b(winword.exe|excel.exe|powerpnt.exe)\b.*</code>
+6. Klik tab <strong>Size &amp; Position</strong>
+7. Centang <strong>Full Screen</strong>, Opsi <strong>Force</strong>, <strong>No</strong>
+8. Centang <strong>Ignore Requested Geometry</strong>, Opsi <strong>Force</strong>, <strong>Yes</strong>
+9. Profit</p>
+
+<p>Sumber: <a href="https://www.codeweavers.com/compatibility/crossover/forum/microsoft-office-2010?msg=157908">https://www.codeweavers.com/compatibility/crossover/forum/microsoft-office-2010?msg=157908</a></p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-baseurl                 = "/"               # Your domain name. Must end with "/"
+baseurl                 = "sumarsono.com/"               # Your domain name. Must end with "/"
 languageCode            = "en-us"
 defaultContentLanguage  = "en"
 isMultilingual          = false
@@ -28,7 +28,7 @@ pygmentsCodefences      = true
 
 [[params.mainMenu]]
     link = "/posts"
-    text = "Alway learning"
+    text = "Always learning"
 
 [[params.mainMenu]]
     link = "/posts"

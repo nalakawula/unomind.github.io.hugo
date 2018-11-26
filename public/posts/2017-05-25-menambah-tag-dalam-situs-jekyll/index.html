@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Menambah Tag dalam Situs Jekyll
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Menambah Tag dalam Situs Jekyll</div>
+
+        
+<div class="section" id="content">
+    Thu May 25, 2017 &#183; 494 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Kemarin pagi, dihari yang cerah nan hangat, terlintas dalam pikiran saya <a href="https://www.sumarsono.id">sumarsono.id</a> kalau diberi <em>tagging</em> sepertinya keren.</p>
+
+<p>Siangnya, di hari nan panas saya mencari referensi dan menemukan situs yang mengerti apa yang ada dalam benak saya kala itu, yakni situsnya <a href="http://charliepark.org/tags-in-jekyll/">charli</a> dan situsnya <a href="http://pavdmyt.com/how-to-implement-tags-at-jekyll-website/">Pavel D</a>. Awesome.</p>
+
+<p>Di malam nan dingin merasuk sukma, saya mewujudkan angan. Dari dua referensi, saya menerapkan <em>tagging</em> yang ditulis <a href="http://pavdmyt.com/how-to-implement-tags-at-jekyll-website/">Pavel D</a> dengan sedikit modifkasi agar pas dengan <a href="https://www.sumarsono.id">sumarsono.id</a>. Berikut ini rangkumannya:</p>
+
+<ul>
+<li>Beri <code>tags</code> pada setiap <code>front matter</code> masing-masing artikel yang kita tulis. Contohnya:</li>
+</ul>
+
+<pre><code>---
+layout: post
+title: &quot;Menambah Tag dalam Situs Jekyll&quot;
+date: 2017-05-25 09:10:39
+tags: [jekyll]
+---
+</code></pre>
+
+<ul>
+<li>edit <code>_layout/post.html</code>, tambahkan:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tags&#34;</span>&gt;
+    {% for tag in page.tags %}
+      &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/tags#{{ tag }}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tag&#34;</span>&gt;{{ tag }}&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+    {% endfor %}
+&lt;/<span style="color:#f92672">ul</span>&gt;</code></pre></div>
+<p>Tujuannya agar setiap artikel muncul <code>tag</code> -nya (lihat artikel ini, dibawah Judul ada tanggal dan tag).</p>
+
+<ul>
+<li>Nah sekarang, tinggal membuat <code>page</code> yang isinya kumpulan semua <code>tag</code>. Buatlah file dengan nama <code>tags.md</code> di folder root site kita,kemudian isi dengan:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">---
+layout: page
+title: Tags
+permalink: /tags/
+---
+<span style="color:#75715e">&lt;!-- Get the tag name for every tag on the site and set them
+</span><span style="color:#75715e">to the `site_tags` variable. --&gt;</span>
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+
+<span style="color:#75715e">&lt;!-- `tag_words` is a sorted array of the tag names. --&gt;</span>
+{% assign tag_words = site_tags | split:&#39;,&#39; | sort %}
+
+<span style="color:#75715e">&lt;!-- List of all tags --&gt;</span>
+&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tags&#34;</span>&gt;
+  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ tag_words[item] }}{% endcapture %}
+    &lt;<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#{{ this_word | cgi_escape }}&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;tag&#34;</span>&gt;{{ this_word }}
+        &lt;<span style="color:#f92672">span</span>&gt;({{ site.tags[this_word].size }})&lt;/<span style="color:#f92672">span</span>&gt;
+      &lt;/<span style="color:#f92672">a</span>&gt;
+    &lt;/<span style="color:#f92672">li</span>&gt;
+  {% endunless %}{% endfor %}
+&lt;/<span style="color:#f92672">ul</span>&gt;
+---
+
+
+<span style="color:#75715e">&lt;!-- Posts by Tag --&gt;</span>
+&lt;<span style="color:#f92672">div</span>&gt;
+  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ tag_words[item] }}{% endcapture %}
+    &lt;<span style="color:#f92672">h2</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ this_word | cgi_escape }}&#34;</span>&gt;{{ this_word }}&lt;/<span style="color:#f92672">h2</span>&gt;
+    {% for post in site.tags[this_word] %}{% if post.title != null %}
+      &lt;<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;float: left;&#34;</span>&gt;
+          &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ post.url }}&#34;</span>&gt;{{ post.title }}&lt;/<span style="color:#f92672">a</span>&gt;
+        &lt;/<span style="color:#f92672">span</span>&gt;
+        &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;float: right;&#34;</span>&gt;
+          {{ post.date | date_to_string }}
+        &lt;/<span style="color:#f92672">span</span>&gt;
+      &lt;/<span style="color:#f92672">div</span>&gt;
+      &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;clear: both;&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+    {% endif %}{% endfor %}
+
+  {% endunless %}{% endfor %}
+
+&lt;/<span style="color:#f92672">div</span>&gt;</code></pre></div>
+<ul>
+<li>Waktunya memberi style, edit <code>main.css</code>, tambahkan:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#a6e22e">tags</span> {
+  <span style="color:#66d9ef">list-style</span>: <span style="color:#66d9ef">none</span>;
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">overflow</span>: <span style="color:#66d9ef">hidden</span>;
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#fdf6e3</span>;
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#2a7ae2</span>
+}
+
+.<span style="color:#a6e22e">tags</span> <span style="color:#f92672">li</span> {
+  <span style="color:#66d9ef">float</span>: <span style="color:#66d9ef">left</span>;
+}
+
+.<span style="color:#a6e22e">tag</span> {
+  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#eee</span>;
+  <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">3</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#999</span>;
+  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>;
+  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">26</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">line-height</span>: <span style="color:#ae81ff">26</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">23</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">relative</span>;
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">none</span>;
+  <span style="color:#66d9ef">-webkit-</span><span style="color:#66d9ef">transition</span>: <span style="color:#66d9ef">color</span> <span style="color:#ae81ff">0.2</span><span style="color:#66d9ef">s</span>;
+}
+
+.<span style="color:#a6e22e">tag</span>::<span style="color:#a6e22e">before</span> {
+  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#fff</span>;
+  <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">box-shadow</span>: <span style="color:#66d9ef">inset</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.25</span>);
+  <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#39;&#39;</span>;
+  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">6</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+}
+
+.<span style="color:#a6e22e">tag</span>::<span style="color:#a6e22e">after</span> {
+  <span style="color:#66d9ef">background</span>: <span style="color:#ae81ff">#fdf6e3</span>;
+  <span style="color:#66d9ef">border-bottom</span>: <span style="color:#ae81ff">13</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">transparent</span>;
+  <span style="color:#66d9ef">border-left</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#eee</span>;
+  <span style="color:#66d9ef">border-top</span>: <span style="color:#ae81ff">13</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">transparent</span>;
+  <span style="color:#66d9ef">content</span>: <span style="color:#e6db74">&#39;&#39;</span>;
+  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+  <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">0</span>;
+  <span style="color:#66d9ef">top</span>: <span style="color:#ae81ff">0</span>;
+}
+
+.<span style="color:#a6e22e">tag</span>:<span style="color:#a6e22e">hover</span> {
+  <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">crimson</span>;
+  <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">white</span>;
+  <span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">none</span>;
+}
+
+.<span style="color:#a6e22e">tag</span>:<span style="color:#a6e22e">hover</span>::<span style="color:#a6e22e">after</span> {
+   <span style="color:#66d9ef">border-left-color</span>: <span style="color:#66d9ef">crimson</span>;
+}</code></pre></div>
+<p>Hasilnya poin 3 dapat dilihat di <code>({{ site.url }}/tags)</code></p>
+
+<p>Thanks</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

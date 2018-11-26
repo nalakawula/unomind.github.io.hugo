@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Mudah Dualboot Remix OS dengan Arch Linux
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Mudah Dualboot Remix OS dengan Arch Linux</div>
+
+        
+<div class="section" id="content">
+    Wed Jul 05, 2017 &#183; 284 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p><img src="/assets/img/remixos-2.jpg" alt="Remix OS-1" /></p>
+
+<p>Siang tadi, saya sedikit senggang. Kesempatan itu saya gunakan untuk mencoba install Remix OS di Thinkpad x200. Iseng saja sebenarnya, ingin tahu seperti apa rasanya menjalankan Remix OS di laptop tua.</p>
+
+<p>Remix OS merupakan sistem operasi Android yang dimodifikasi sehingga tampilannya mirip dengan sistem operasi besutan Microsoft. Namun sayangnya, Remix OS ini sudah berhenti dikembangkan. Selengkapanya silakan kunjungi <a href="http://jide.com">jide.com</a>.</p>
+
+<p>Thinkpad x200 milik saya, sudah terpasang sistem operasi Arch Linux. Jadi, akan saya dualboot dengan Remix OS. Caranya sangat mudah, sama halnya dengan proses dualboot dengan Android X86. Berikut ini langkah sayang saya ambil:</p>
+
+<ul>
+<li>Download File Remix OS <a href="https://www.fosshub.com/Remix-OS.html">disini</a></li>
+<li>Ekstrak hasil download tadi, maka akan didapat berkas-berkas berikut ini:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>sumarsono@mesin-arch Remix_OS_for_PC_Android_M_32bit_B2016112201<span style="color:#f92672">]</span>$ tree
+.
+├── How_to_launch_Remix_OS_for_PC.txt
+├── md5sum.txt
+├── Remix_OS_for_PC_Android_M_32bit_B2016112201.iso
+└── Remix_OS_for_PC_Installation_Tool-B2016080802.exe
+<span style="color:#ae81ff">0</span> directories, <span style="color:#ae81ff">4</span> files</code></pre></div>
+<ul>
+<li>Siapkan satu partisi <code>EXT4</code>, milik saya <code>sda4</code> sebesar 10GB. Dijadikan satu dengan partisi <code>/</code> milik arch juga boleh. Jangan lupa set <code>bootable</code> jika menggunakan partisi terpisah.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/dev/sda4  *    <span style="color:#ae81ff">213958656</span> <span style="color:#ae81ff">234438655</span>  <span style="color:#ae81ff">20480000</span>  <span style="color:#ae81ff">9</span>,8G <span style="color:#ae81ff">83</span> Linux</code></pre></div>
+<ul>
+<li>Mount berkas <code>Remix_OS_for_PC_Android_M_32bit_B2016112201.iso</code> hasil ekstrak tadi.</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">fuseiso /direktori/hasil/ekstrak/Remix_OS_for_PC_Android_M_32bit_B2016112201/Remix_OS_for_PC_Android_M_32bit_B2016112201.iso /lokasi/yg/mau/dijadika/tempat/mount/</code></pre></div>
+<p>Dalam hal ini, saya menggunakan <code>fuseiso</code>. Boleh menggunakan tool lain. Punya saya, saya mount ke <code>/home/sumarsono/ISO/</code>.</p>
+
+<ul>
+<li>Masuk ke direktori <code>/dev/sda4</code> kemudian buat folder dengan <code>RemixOS/data/</code></li>
+<li>Kembali ke <code>/home/sumarsono/ISO/</code> kemudian copy file berikut ini kemudian paste ke <code>/dev/sda4/RemixOS</code>:
+
+<ul>
+<li>initrd.img</li>
+<li>isolinux.sys</li>
+<li>kernel</li>
+<li>ramdisk.img</li>
+<li>system.sfs,
+Sehingga isi dari <code>/dev/sda4</code> adalah sebagai berikut:</li>
+</ul></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  .
+  └── RemixOS
+      ├── data
+      ├── initrd.img
+      ├── isolinux.sys
+      ├── kernel
+      ├── ramdisk.img
+      └── system.sfs
+    <span style="color:#ae81ff">3</span> directories, <span style="color:#ae81ff">5</span> files
+    <span style="color:#e6db74">```</span>
+
+* Kemudian edit file <span style="color:#e6db74">`</span>/etc/grub.d/40_custom<span style="color:#e6db74">`</span>, tambahkan:
+
+<span style="color:#e6db74">```</span>shell
+menuentry <span style="color:#e6db74">&#34;Remix OS&#34;</span> <span style="color:#f92672">{</span>
+        set root<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;(hd0,4)&#39;</span> <span style="color:#75715e">#sesuaikan dengan partisi yang disiapkan
+</span><span style="color:#75715e"></span>        linux /RemixOS/kernel quiet root<span style="color:#f92672">=</span>/dev/ram0 SERIAL<span style="color:#f92672">=</span>random logo.showlogo<span style="color:#f92672">=</span>$
+        initrd /RemixOS/initrd.img
+<span style="color:#f92672">}</span></code></pre></div>
+<ul>
+<li>update <code>grub.cfg</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo grub-mkconfig -o /boot/grub/grub.cfg</code></pre></div>
+<ul>
+<li>Reboot, and viola ! sudah bisa boot ke Remix OS</li>
+</ul>
+
+<p>Screenshot:</p>
+
+<p><img src="/assets/img/remixos-1.jpg" alt="Remix OS-2" /></p>
+
+<p><img src="/assets/img/remixos-3.jpg" alt="Remix OS-3" /></p>
+
+<p>Mudah bukan? selamat mencoba</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

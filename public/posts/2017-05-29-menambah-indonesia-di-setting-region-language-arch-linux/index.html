@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Menambahkan Indonesia di Setting Region &amp; Language Arch Linux
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Menambahkan Indonesia di Setting Region &amp; Language Arch Linux</div>
+
+        
+<div class="section" id="content">
+    Mon May 29, 2017 &#183; 75 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Ketika saya melakukan pemasangan Arch Linux, <code>locale</code> yang saya gunakan dan saya <em>generate</em> hanyalah <code>en_US.UTF-8 UTF-8</code>. Hal ini tentu saja akan menyebabkan isi dari setting <code>Region and Language</code> hanya ada <code>English</code> dan <code>US</code>.</p>
+
+<p>Saya ingin, untuk bagian <code>format</code> menggunakan Indonesia, nah yang saya lakukan adalah berikut ini:</p>
+
+<ul>
+<li>Buka file <code>/etc/locale.gen</code></li>
+<li>Cari baris <code>#id_ID.UTF-8 UTF-8</code> dan hapus tanda <code>#</code> -nya kemudian simpan</li>
+<li>Selanjutnya jalankan <code>locale-gen</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo locale-gen</code></pre></div>
+<ul>
+<li>Buka setting <code>Region and Language</code>, sudah ada <strong>Indonesia</strong> disana.</li>
+</ul>
+
+<p><img src="/assets/img/region-and-language.png" alt="Region and Language" /></p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

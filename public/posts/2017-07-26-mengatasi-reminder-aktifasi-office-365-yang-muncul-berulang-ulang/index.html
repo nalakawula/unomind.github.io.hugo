@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Mengatasi Aktivasi Office 365 yang Muncul Berulang-ulang
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Mengatasi Aktivasi Office 365 yang Muncul Berulang-ulang</div>
+
+        
+<div class="section" id="content">
+    Wed Jul 26, 2017 &#183; 177 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p><img src="/assets/img/365.PNG" alt="Reminder Office 365" /></p>
+
+<p>Kemarin, dapat Lenovo AIO PC yang mana sudah terpasang Windows 10 Home. Umumnya <em>unboxing</em>, buka kardus dan tes Power ON. Begitu hidup, akan diarahkan untuk <em>setup</em> akun Window dan Lenovo ID.</p>
+
+<p>Terlalu panjang <em>Skip Skip</em>&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;.</p>
+
+<p>Singkat cerita, ada office 365 didalamnya, saya buang dan ganti Office 2016. Setelah Windows dan Office saya aktifkan via internet, eh ada yang ngeselin. Setiap buka aplikasi Office, selalu muncul peringatan untuk aktifasi Office 365. Sungguh <em>shitty shit</em> dan <em>annoying</em>. Di restart masih sama saja.</p>
+
+<p>Coba <em>browsing</em>, dengan kata kunci &ldquo;annoying office 365 activation reminder&rdquo; dan ternyata ada yang mengalami hal yang sama, dan sudah ada solusinya. Berikut saya kutip dari <a href="https://support.microsoft.com/en-us/help/3170450/repeated-activation-prompts-occur-after-installing-volume-license-vers">sini</a></p>
+
+<p>To resolve this problem, export the following registry keys and delete from computer.</p>
+
+<ul>
+<li>Close activation screen.</li>
+<li>On the Start menu, click Run.</li>
+<li>Type regedit, and then press Enter.</li>
+<li>Select the following key in the registry.</li>
+</ul>
+
+<pre><code>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\16.0\Common\OEM
+</code></pre>
+
+<ul>
+<li>Right click the OEM value and click File&gt;Export.</li>
+<li>Save the key</li>
+<li>Once the key is backed-up, click on Edit&gt;Delete</li>
+<li>Repeat steps 4-7 with following key</li>
+</ul>
+
+<pre><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\16.0\Common\OEM
+</code></pre>
+
+<ul>
+<li>Exit Registry Editor</li>
+</ul>
+
+<p>restart dan selesai.</p>
+
+<p>Semoga bermanfaat.</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

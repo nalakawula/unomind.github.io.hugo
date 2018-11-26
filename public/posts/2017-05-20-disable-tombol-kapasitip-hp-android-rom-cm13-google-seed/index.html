@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Disable Tombol Kapasitip HP Android ROM CM13-Google-Seed
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Disable Tombol Kapasitip HP Android ROM CM13-Google-Seed</div>
+
+        
+<div class="section" id="content">
+    Sat May 20, 2017 &#183; 77 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Bosan menggunakan tombol fisik? ingin ganti ke softkey? sudah ganti tapi tombol fisik terasa <em>annoying</em>?</p>
+
+<p>Mudah saja. Disable aja tombol kapasitipnya.
+Caranya? check this out:</p>
+
+<ul>
+<li>Hubungkan HP ke Laptop</li>
+<li>Aktifkan <code>USB Debugging</code> di HP</li>
+<li>Buka Termninal</li>
+<li>Jalankan perintah adb shell dan minta hak ases <code>root</code>:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">adb shell
+su</code></pre></div>
+<ul>
+<li>Edit file <code>Generic.kl</code>:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">vim /system/usr/keylayout/Generic.kl</code></pre></div>
+<ul>
+<li><p>Cari tulisan:</p>
+
+<ul>
+<li><code>key 139   MENU</code></li>
+<li><code>key 172   HOME</code></li>
+<li><code>key 158   BACK</code></li>
+</ul>
+
+<p>Kemudian beri tanda <code>#</code> didepannya</p></li>
+
+<li><p>Simpan</p></li>
+
+<li><p>Exit adb shell</p></li>
+
+<li><p>Reboot HP</p></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">adb reboot</code></pre></div>
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

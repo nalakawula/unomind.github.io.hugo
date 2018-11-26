@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Mudah Download Xcode 9 Beta 5 dengan Resume Support
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Mudah Download Xcode 9 Beta 5 dengan Resume Support</div>
+
+        
+<div class="section" id="content">
+    Mon Aug 14, 2017 &#183; 251 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Tiga hari ini, saya mencoba download Xcode 9 beta 5 yang berukuran segede gaban 0dan berkali kali menemui kegagagalan. Dan baru siang ini sukes. File berukuran 4.9GB ini akhirnya sukses masuk dalam penyimpanan pribadi saya.</p>
+
+<p>Kendala yang saya temui adalah tidak bisa resume download yang terputus, berbagai download manager saya coba, seperti bawaan Safari, bawaan firefox, Downthemall, dan Folx. Semuanya tidak cocok dengan CDN <code>developer.apple.com</code> yang menggunakan auth berdasarkan cookie dari browser.</p>
+
+<p>Jadi kita login ke <code>developer.apple.com</code>&ndash;&gt;browser menyimpan cookie&ndash;&gt;Download dimulai. Begitu cookie dalam browser expired, maka download tidak dapat dilanjutkan. Bagi saya yang kecepatan unduhan tidak secepat <em>the flash</em> benar-benar kerepotan.</p>
+
+<p>Sampai akhirnya saya jengkel dan mencari solusi, baru siang ini secara tidak sengaja saya menemukan tulisan <a href="http://iandundas.com/blog/2017/2/21/script-for-reliably-and-quickly-downloading-xcode-on-a-poor-connection">Ian Dundas</a>. Beliau menulis script <code>ruby</code>untuk dowload xcode. <strong>He is my lifesaver</strong>. Thank you <a href="http://iandundas.com/blog/2017/2/21/script-for-reliably-and-quickly-downloading-xcode-on-a-poor-connection">Ian</a>.</p>
+
+<p>Saya hanya perlu mengubah sedikit script-nya agar sesuai dengan keadaan saya, dan akhirnya xcode terdownload dengan selamat. Ringkasnya yang saya lakukan adalah sebagai berikut:</p>
+
+<ol>
+<li>Pasang extensi <a href="https://bitstorm.org/extensions/view-cookies/">View Cookies</a> untuk firefox.</li>
+<li>Copy script <a href="http://iandundas.com/blog/2017/2/21/script-for-reliably-and-quickly-downloading-xcode-on-a-poor-connection">Ian Dundas</a> simpan sebagi <code>download_xcode.rb</code></li>
+<li>Edit script tersebut</li>
+<li>Buka firefox, kemudian buka <a href="https://developer.apple.com/download/">https://developer.apple.com/download/</a></li>
+<li>Login dengan akun apple id</li>
+<li>Klik Download kemudian klik save File</li>
+<li>Show all download pada firefox, kemudian pada proses download xcode, klik kanan, copy download link. Milik saya ini <a href="https://download.developer.apple.com/Developer_Tools/Xcode_9_beta_5/Xcode_9_beta_5.xip">https://download.developer.apple.com/Developer_Tools/Xcode_9_beta_5/Xcode_9_beta_5.xip</a> linknya.</li>
+<li>Jalankan script <code>download_xcode.rb</code></li>
+<li>Akan diminta memasukan download link, paste link tadi.</li>
+<li>kemudian akan diminta untuk memasukan cookie <code>ADCDownloadAuth</code></li>
+<li>Kembali ke halaman <a href="https://developer.apple.com/download/">https://developer.apple.com/download/</a> kemudian tekan <code>cmd</code>+<code>i</code>, masuk ke tab Cookies</li>
+<li>Cari cookie bernama <code>ADCDownloadAuth</code> dan copy <code>value</code>-nya</li>
+<li>Selesai, download akan dimulai dengan resume support.</li>
+</ol>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title"></div>
+
+        
+<div class="section" id="content">
+    Fri Apr 14, 2017 &#183; 96 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    
+
+<p>Hari ini, saya mainan virtualbox dengan setup sebagai berikut:
+- Sistem operasi: Ubuntu 16.04
+- Network Adapter 1: NAT
+- Network Adapter 2: Host-Only adapter
+- Host only adapter sudah diset sebagai DHCP Server</p>
+
+<h2 id="masalah">Masalah</h2>
+
+<p>Setelah selesai Intsall sistem operasi, ternyata adapter 2 tidak mendapatkan IP Address.</p>
+
+<h2 id="solusi">Solusi</h2>
+
+<ol>
+<li>Cek apakah network adapater 2 terdeteksi oleh sistem,
+<code>
+ip link
+</code>
+Catat outputnya, misal adapter 1 terdeteksi sebagai ens0p3 dan adapter 2 tereteksi sebagai ens0p8.</li>
+<li>Edit <code>/etc/network/interfaces</code> dan isi dengan:
+<code>
+auto ens0p3
+iface ens0p3 inet dhcp
+auto ens0p8
+iface ens0p8 inet dhcp
+</code></li>
+<li>Restart network
+<code>
+sudo systemctl restart networking
+</code></li>
+<li>Profit</li>
+</ol>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

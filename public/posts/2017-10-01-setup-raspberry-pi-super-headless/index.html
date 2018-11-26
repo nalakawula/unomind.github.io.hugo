@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title"></div>
+
+        
+<div class="section" id="content">
+    Fri Apr 14, 2017 &#183; 143 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    
+
+<p>Kok super headless?
+Kasusnya begini, kita punya:
+1. Raspberry Pi 3
+2. Kabel LAN
+3. Flashdisk Sandisk 4GB
+4. Adaptor 5V3A
+5. Laptop
+6. USB TTL</p>
+
+<p>Saya sebut super headless karena raspi akan saya setup tanpa DHCP server.</p>
+
+<h3 id="langkah-langkahnya">Langkah-langkahnya</h3>
+
+<ol>
+<li>Download OS untuk raspberry pi, Raspbian Lite  <a href="https://www.raspberrypi.org/downloads/raspbian/">DISINI</a>.</li>
+<li>Restore image raspbian ke flashdisk, terserah mau pakai tool apa, <code>dd</code>, <code>gnome-disk</code>, <code>etcher</code>.</li>
+<li>Setelah selesai, akan muncul partisi <code>boot</code> dari flashdisk, buka saja.</li>
+<li>Enable UART raspi, Cari file <code>config.txt</code> kemudian tambahkan <code>enable_uart=1</code></li>
+<li>Pasang flashdisk ke raspi</li>
+<li>Hubungkan USB TTL ke raspi dan laptop</li>
+<li>GND &mdash; GND</li>
+<li>RX &mdash; TX</li>
+
+<li><p>TX &mdash; RX</p></li>
+
+<li><p>Di laptop pasang aplikasi buat UART, misalnya <code>screen</code>, <code>putty</code>.</p></li>
+
+<li><p>Akses UART, <code>sudo screen /dev/ttyUSB0 115200</code></p></li>
+
+<li><p>Hidupkan raspi, nanti muncul log boot kemudian muncul login prompt.</p></li>
+
+<li><p>Profit</p></li>
+</ol>
+
+<p>Kalian pasti menyadari kalau saya tidak memakai microSD, perlu kalian ketahui bahwa raspi 3 bisa boot dari USB.</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

@@ -6,46 +6,854 @@
     <description>Recent content in Blog on Sumarsono</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Nov 2018 12:01:56 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 27 Sep 2017 19:39:08 +0700</lastBuildDate>
     
 	<atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Test Post</title>
-      <link>/posts/test-post/</link>
-      <pubDate>Sat, 17 Nov 2018 12:01:56 +0700</pubDate>
+      <title>Share Koneksi Internet Wifi via Ethernet di Arch Linux</title>
+      <link>/posts/2017-09-27-share-koneksi-internet-wifi-via-ethernet-di-arch-linux/</link>
+      <pubDate>Wed, 27 Sep 2017 19:39:08 +0700</pubDate>
       
-      <guid>/posts/test-post/</guid>
+      <guid>/posts/2017-09-27-share-koneksi-internet-wifi-via-ethernet-di-arch-linux/</guid>
+      <description> Kamu ingin membagikan koneksi internet dari Wifi laptop ke LAN laptop? Kamu pengguna distribusi Arch linux? Kamu pengguna DE GNOME?
+Jika iya, lanjutkan. Jika tidak? tetap lanjutkan.
+Topologi yang saya gunakan Internet&amp;mdash;&amp;mdash;(Wifi) laptop (LAN)&amp;mdash;&amp;mdash;Raspberry Pi 3
+Step by step  Buka nm-connection-editor Klik Add Pilih Ethernet Klik Create… Klik IPv4 Settings Pilih Shared to other computers di menu Method Masukan nama share wifi ke lan dalam kolom isian connection name Profit  </description>
+    </item>
+    
+    <item>
+      <title>Repositori Sublime Text untuk Arch Linux</title>
+      <link>/posts/2017-09-21-repositori-sublime-text-untuk-arch-linux/</link>
+      <pubDate>Thu, 21 Sep 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-09-21-repositori-sublime-text-untuk-arch-linux/</guid>
+      <description>Baru-baru ini Sublime Text 3 diperbaharui oleh tim pengembang. alhail freeware for linux. Terimakasih untuk tim pengembang.
+Dari kasus ini saya menjadi tahu kalau ternyata Sublime Text memiliki Repositori untuk linux, yang dapat diakses DISINI
+Sekian.</description>
+    </item>
+    
+    <item>
+      <title>Postrouting OpenWRT</title>
+      <link>/posts/2017-09-20-postrouting-openwrt/</link>
+      <pubDate>Wed, 20 Sep 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-09-20-postrouting-openwrt/</guid>
+      <description>Melanjutkan artikel tentang relayd
+Pada artikel tersebut, IP 192.168.2.0/24 yang tercantum dalam gambar topologi belum dapat terhubung ke internet. IP yang terhubung internet adalah 192.168.1.0/24.
+Apakah bisa 192.168.2.0/24 dibuat terhubung internet? Bisa. Sederhana saja, kita tambah chain POSTROUTING pada tabel NAT yang akan melakukan MASQUERADE dari 192.168.2.0/24 ke interface wlan0.
+iptables -t nat -A POSTROUTING -s 192.168.2.0/24 -o wlan0 -j MASQUERADE  Profit</description>
+    </item>
+    
+    <item>
+      <title>TP-Link MR3420-v3-EU WDS Mode Dengan Firmware Lede</title>
+      <link>/posts/2017-09-19-tp-link-mr3420-v3-eu-wds-mode-dengan-firmware-lede/</link>
+      <pubDate>Tue, 19 Sep 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-09-19-tp-link-mr3420-v3-eu-wds-mode-dengan-firmware-lede/</guid>
+      <description>Melanjutkan petualangan saya bersama TP-Link MR3420 v3 EU. Ketika menggunakan firmware original dari TP-Link, Wireless router ini mempunyai fitur WDS. Jadi satu Wireless router menjadi client sekaligus Access Point. Topologinya seperti gambar diatas. Ketika saya berpindah ke firmware berbasis openwrt, saya merindukan fitur ini.
+Apakah openwrt tidak punya fitur yang serupa? punya. Tapi saya tidak tahu, saya jadi tahu setelah bertanya di group Telegram Openwrt &amp;amp; IoT.
+Caranya? Ikuti saja wiki tentang relayd ini.</description>
+    </item>
+    
+    <item>
+      <title>i3wm Second Display Only</title>
+      <link>/posts/2017-08-16-i3wm-second-display-only/</link>
+      <pubDate>Wed, 16 Aug 2017 20:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-08-16-i3wm-second-display-only/</guid>
+      <description>Sudah 3 hari saya memakai i3wm di mesin arch linux saya. Bukan apa-apa sih, hanya iseng saja. Kebetulan hari ini, saya menghubungkan mesin ke external monitor yang resolusinya lebih besar yaitu 1440x900.
+Sempat bingung, bagaimana caranya agar display di laptop mati, dan eksternal display ON karena secara default saya berada dalam mode mirror. Ternyata caranya cukup simple.
+ jalankan xrandr  [sumarsono@mesin-arch ~]$ xrandr Screen 0: minimum 8 x 8, current 1440 x 900, maximum 32767 x 32767 LVDS1 connected primary (normal left inverted right x axis y axis) 1280x800 59.</description>
+    </item>
+    
+    <item>
+      <title>Debrick TP-Link MR3420-v3-EU yang Gagal Flash Firmware Berbasis OpenWRT</title>
+      <link>/posts/2017-08-16-debrick-tp-link-mr3420-v3-eu-yang-gagal-flash-firmware-berbasis-openwrt/</link>
+      <pubDate>Wed, 16 Aug 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-08-16-debrick-tp-link-mr3420-v3-eu-yang-gagal-flash-firmware-berbasis-openwrt/</guid>
+      <description>Setelah saya berhasil flash pulpstone, saya penasaran dengan firmware keluaran ofmodemsandmen yaitu GoldenOrb. Saya cek disana, ternyata ada untuk TP-LINK MR3420 V3, hanya saja tidak jelas bisa untuk versi EU atau tidak.
+Modal nekat, coba flash pakai mtd, eh ternyata routernya K.O. Led indikator tidak menyala sama sekali.
+Dengan harapan si router masih bernyawa, saya mencoba mengubungkan port wan ke laptop, menekan dan menahan tombol reset 5-10 detik, kemudian menekan tombol ON pada router, led indikator LAN di laptop berkedip, wah ada komunikasi.</description>
+    </item>
+    
+    <item>
+      <title>Install Firmware Berbasis OpenWRT di TP-LINK MR3420-v3-EU</title>
+      <link>/posts/2017-08-16-install-firmware-berbasis-openwrt-di-tp-link-mr3420-v3-eu/</link>
+      <pubDate>Wed, 16 Aug 2017 19:20:08 +0700</pubDate>
+      
+      <guid>/posts/2017-08-16-install-firmware-berbasis-openwrt-di-tp-link-mr3420-v3-eu/</guid>
+      <description>Saya punya mainan baru, Wireless router merk TP-LINK. Tipe MR3420 v3 (EU version). Penasaran apakah router ini bisa di ganti firmware-nya ke firmware berbasis openwrt, akhirnya saya browsing. Dan ternyata bisa, walaupun belum official dan belum seramai seri pendahulunya, v1 dan v2.
+Alkisah, saya berhasil memasang firmware dari pulpstone, dia berbasis openwrt dan yang membuat adalah orang Indonesia. Ikut bangga. Akan tetapi tidak semulus tutorial yang ditulis di pulpstone, karena punya saya versi EU, tidak bisa langsung flash dari menu system upgrade di dashboard TP-LINK.</description>
+    </item>
+    
+    <item>
+      <title>Mudah Download Xcode 9 Beta 5 dengan Resume Support</title>
+      <link>/posts/2017-08-14-mudah-download-xcode-9-beta-5-dengan-resume-support/</link>
+      <pubDate>Mon, 14 Aug 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-08-14-mudah-download-xcode-9-beta-5-dengan-resume-support/</guid>
+      <description>Tiga hari ini, saya mencoba download Xcode 9 beta 5 yang berukuran segede gaban 0dan berkali kali menemui kegagagalan. Dan baru siang ini sukes. File berukuran 4.9GB ini akhirnya sukses masuk dalam penyimpanan pribadi saya.
+Kendala yang saya temui adalah tidak bisa resume download yang terputus, berbagai download manager saya coba, seperti bawaan Safari, bawaan firefox, Downthemall, dan Folx. Semuanya tidak cocok dengan CDN developer.apple.com yang menggunakan auth berdasarkan cookie dari browser.</description>
+    </item>
+    
+    <item>
+      <title>Laptop dengan Kerusakan pada CPU&#39;s Decoupling Capacitor</title>
+      <link>/posts/2017-07-27-laptop-dengan-kerusakan-pada-cpu-s-decoupling-capacitor/</link>
+      <pubDate>Thu, 27 Jul 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-07-27-laptop-dengan-kerusakan-pada-cpu-s-decoupling-capacitor/</guid>
+      <description>Jikalau laptop engkau mengalami gejala berikut:
+ Random reboot Random BSOD Tidak bisa masuk ke OS Linux meskipun via flashdisk Random BSOD ketika install OS Windows Kadang tidak mau di charge padahal baterai normal Kadang tidak mau masuk windows saat di charge.  Besar kemungkinan laptop tersebut rusak Kapasitornya, lebih spesifik CPU&amp;rsquo;s Decoupling Capasitor. Solusi tercepat jika tidak punya uang (atau alasan lain) untuk menggantinya, cobalah untuk hanya mengaktifkan satu core cpu saja di bios.</description>
+    </item>
+    
+    <item>
+      <title>Mengatasi Aktivasi Office 365 yang Muncul Berulang-ulang</title>
+      <link>/posts/2017-07-26-mengatasi-reminder-aktifasi-office-365-yang-muncul-berulang-ulang/</link>
+      <pubDate>Wed, 26 Jul 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-07-26-mengatasi-reminder-aktifasi-office-365-yang-muncul-berulang-ulang/</guid>
+      <description>Kemarin, dapat Lenovo AIO PC yang mana sudah terpasang Windows 10 Home. Umumnya unboxing, buka kardus dan tes Power ON. Begitu hidup, akan diarahkan untuk setup akun Window dan Lenovo ID.
+Terlalu panjang Skip Skip&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;&amp;hellip;.
+Singkat cerita, ada office 365 didalamnya, saya buang dan ganti Office 2016. Setelah Windows dan Office saya aktifkan via internet, eh ada yang ngeselin. Setiap buka aplikasi Office, selalu muncul peringatan untuk aktifasi Office 365. Sungguh shitty shit dan annoying.</description>
+    </item>
+    
+    <item>
+      <title>can&#39;t open device /dev/ttyACM0: Permission denied Ketika Upload Program Arduino dari Arch Linux</title>
+      <link>/posts/2017-07-17-mengatasi-galat-can-t-open-device-dev-ttyacm0-permission-denied-ketika-upload-program-ke-arduino-dari-arch-linux/</link>
+      <pubDate>Mon, 17 Jul 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-07-17-mengatasi-galat-can-t-open-device-dev-ttyacm0-permission-denied-ketika-upload-program-ke-arduino-dari-arch-linux/</guid>
+      <description>Ceritanya, malam ini saya mendapat rongsokan Arduino Mega 250 dari tukang rongsokan, secara free alias gratis. Namanya barang gratis, kalau normal ya Alhamdulillah, kalau rusak ya sudah tidak mengapa.
+Langsung ambil kabel USB dan tancap ke mesin Arch Linux. Si Arduino ini, sifatnya masukan dan mainkan ketika dipasang di mesin berbasis GNU/Linux. Langsung terdeteksi sebagai:
+Bus 006 Device 004: ID 2341:0042 Arduino SA Mega 2560 R3 (CDC ACM) Dulu, ketika masih menggunakan Ubuntu, saya harus membuat udev rule untuk proses baca tulis ke Arduino.</description>
+    </item>
+    
+    <item>
+      <title>Akses Android MTP di OSX</title>
+      <link>/posts/2017-07-16-akses-android-mtp-di-os-x/</link>
+      <pubDate>Sun, 16 Jul 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-07-16-akses-android-mtp-di-os-x/</guid>
+      <description>Secara default ketika kita menghubungkan device android ke PC melalui sambungan USB, akan termount sebagai MTP device. Namun berbeda dengan yang terjadi di mesin MAC.
+Untuk mengakses MTP di mesin MAC, kita harus memanfaatkan Aplikasi androidfiletransfer. Aplikasi tersebut dapat diunduh dari sini
+How to use it  Download the app. Open androidfiletransfer.dmg. Drag Android File Transfer to Applications. Use the USB cable that came with your Android device and connect it to your Mac.</description>
+    </item>
+    
+    <item>
+      <title>Google Chrome Standalone Installer</title>
+      <link>/posts/2017-07-13-google-chrome-standalone-installer/</link>
+      <pubDate>Thu, 13 Jul 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-07-13-google-chrome-standalone-installer/</guid>
+      <description>Rasa-rasanya sudah sangat lama tidak menggunakan sistem operasi microsoft Windows. Sampai-sampai mau install google chrome saja kesusahan. Setelah mengunjungi situsnya google Chrome, ternyata installernya harus online.
+Langsung saja nge DDG untuk mencari installer google chrome yang offline. Dan ketemu diskusi ini. Ternyata untuk mengunduh chrome standalone installer harus kesini
+Tulisan ini saya tulis untuk catatan pribadi saja. Semoga kelak berguna.
+Terimakasih</description>
+    </item>
+    
+    <item>
+      <title>Mudah Mencari Driver Printer Canon dengan Cepat</title>
+      <link>/posts/2017-07-13-mudah-mencari-driver-printer-canon-dengan-cepat/</link>
+      <pubDate>Thu, 13 Jul 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-07-13-mudah-mencari-driver-printer-canon-dengan-cepat/</guid>
+      <description>Langsung saja kesini</description>
+    </item>
+    
+    <item>
+      <title>Mudah Dualboot Remix OS dengan Arch Linux</title>
+      <link>/posts/2017-07-05-mudah-dualboot-remix-os-dengan-arch-linux/</link>
+      <pubDate>Wed, 05 Jul 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-07-05-mudah-dualboot-remix-os-dengan-arch-linux/</guid>
+      <description>Siang tadi, saya sedikit senggang. Kesempatan itu saya gunakan untuk mencoba install Remix OS di Thinkpad x200. Iseng saja sebenarnya, ingin tahu seperti apa rasanya menjalankan Remix OS di laptop tua.
+Remix OS merupakan sistem operasi Android yang dimodifikasi sehingga tampilannya mirip dengan sistem operasi besutan Microsoft. Namun sayangnya, Remix OS ini sudah berhenti dikembangkan. Selengkapanya silakan kunjungi jide.com.
+Thinkpad x200 milik saya, sudah terpasang sistem operasi Arch Linux. Jadi, akan saya dualboot dengan Remix OS.</description>
+    </item>
+    
+    <item>
+      <title>Backup Partisi Root Arch Linux Menggunakan Gnome Disk</title>
+      <link>/posts/2017-07-04-backup-partisi-root-arch-linux-menggunakan-gnome-disk/</link>
+      <pubDate>Tue, 04 Jul 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-07-04-backup-partisi-root-arch-linux-menggunakan-gnome-disk/</guid>
+      <description>Saya berniat memindahkan sistem operasi Arch Linux yang saya gunakan ke SSD lain, sehingga saya tidak perlu setup arch linux dari awal. setup arch linux dari awal itu sangat wasting time dan boros kuota. Alih alih mau produktif malah jadi kontra produktif.
+Kronologi:
+ Backup partisi Root Simpan ke HDD eksternal Pasang SSD baru Restore partisi Root Install dan konfigurasi grub  Oleh sebab itu, kenapa tidak clone aja systemnya, begitu di restore sudah tidak ribet setup ini itu.</description>
+    </item>
+    
+    <item>
+      <title>Backup Bootloader Arc Linux</title>
+      <link>/posts/2017-06-27-backup-bootloader-arch-linux/</link>
+      <pubDate>Tue, 27 Jun 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-06-27-backup-bootloader-arch-linux/</guid>
+      <description>I have a big plan for my old laptop. So I need to backup entire root partition. Of course I need to backup my bootloader, too. In this articel, I will write how to backup bootloader only.
+I did this in my Arch Linux machine, but I&amp;rsquo;m pretty sure this is relevant to another gnu/linux distro. I must warn you, that I not yet try to restore from this backup procedure.</description>
+    </item>
+    
+    <item>
+      <title>Ada yang Salah dengan Idulfitri ku</title>
+      <link>/posts/2017-06-26-ada-yang-salah-dengan-idulfitri-ku/</link>
+      <pubDate>Mon, 26 Jun 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-06-26-ada-yang-salah-dengan-idulfitri-ku/</guid>
+      <description>Saya akan membuka artikel ini dengan mengucapkan Selamat Idulfitri. Saya selaku admin, memohon maaf kepada semua pengunjung situs ini.
+Sesuai dengan judul dan tag, artikel ini berbeda dengan artikel yang biasa saya tulis. Saya akan curhat. Idulfitri, dari saya kecil sampai saya berusia 25 tahun, ceremony-nya selalu sama.
+Namun, pada Idulfitri tahun ini saya merasa ada yang ganjil, ada yang salah, ada yang kurang, ada yang tidak beres. Perasaan mengganjal itu, sedikit sulit diungkap dengan kata.</description>
+    </item>
+    
+    <item>
+      <title>K9-Mail dan Verifikasi Dua Langkah Google</title>
+      <link>/posts/2017-06-10-k-9-mail-dan-verifikasi-dua-langkah-google/</link>
+      <pubDate>Sat, 10 Jun 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-06-10-k-9-mail-dan-verifikasi-dua-langkah-google/</guid>
+      <description>Yesterday, saya merasa gerah dengan aplikasi Gmail untuk Android. Notifikasi email masuknya telat, menunggu aplikasinya dibuka dulu. Setelah saya telaah, ternyata aplikasi Gmail ini lumayan rakus penggunaan RAM-nya, maklum HP saya HP low end dengan spesifikasi rendah.
+Oleh sebab itu, saya mencari aplikasi email client yang ringan. Akhirnya ketemu dengan K-9 Mail. Ukurannya kecil.
+Selesai unduh, langsung saya coba untuk masuk menggunakan akun Gmail saya, eh gak bisa login, dan tidak ada pesan error apapun.</description>
+    </item>
+    
+    <item>
+      <title>Menambahkan Indonesia di Setting Region &amp; Language Arch Linux</title>
+      <link>/posts/2017-05-29-menambah-indonesia-di-setting-region-language-arch-linux/</link>
+      <pubDate>Mon, 29 May 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-29-menambah-indonesia-di-setting-region-language-arch-linux/</guid>
+      <description>Ketika saya melakukan pemasangan Arch Linux, locale yang saya gunakan dan saya generate hanyalah en_US.UTF-8 UTF-8. Hal ini tentu saja akan menyebabkan isi dari setting Region and Language hanya ada English dan US.
+Saya ingin, untuk bagian format menggunakan Indonesia, nah yang saya lakukan adalah berikut ini:
+ Buka file /etc/locale.gen Cari baris #id_ID.UTF-8 UTF-8 dan hapus tanda # -nya kemudian simpan Selanjutnya jalankan locale-gen  sudo locale-gen  Buka setting Region and Language, sudah ada Indonesia disana.</description>
+    </item>
+    
+    <item>
+      <title>Jekyll di Arch Linux</title>
+      <link>/posts/2017-05-27-jekyll-di-arch-linux/</link>
+      <pubDate>Sat, 27 May 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-27-jekyll-di-arch-linux/</guid>
+      <description>Kamis, 25 Mei 2017 saya melakukan pemasangan Arch Linux untuk menggantikan Fedora 25. Jumat, 26 Mei 2017, Arch Linux di mesin saya, sudah siap digunakan. Sabtu, 27 Mei 2017, Saya ingin melanjutkan penulisan artikel untuk sumarsono.id  sumarsono.id (domain sudah mati, hehe) ini dibangun menggunakan Jekyll, maka saya perlu setup jekyll untuk mesin Arch Linux saya. Berikut ini, langkah-langkahnya:
+ Install ruby karena kita butuh RubyGems:
+sudo pacman -S ruby Selanjutnya edit .</description>
+    </item>
+    
+    <item>
+      <title>Pacman Cheat Sheet</title>
+      <link>/posts/2017-05-27-pacman-cheat-sheet/</link>
+      <pubDate>Sat, 27 May 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-27-pacman-cheat-sheet/</guid>
+      <description>Saya adalah new comer di dunia Arch Linux. Sebagai pemula, tentu mengalami kendala. Sebelum menggunakan Arch Linux, saya menggunakan Fedora. Sebelum menggunakan Fedora saya menggunakan Ubuntu.
+Semua distribusi linux yang saya sebutkan tadi, memiliki package manager yang berbeda. Ubuntu menggunakan apt, Fedora menggunakan dnf (dulu yum), nah Arch Linux ini menggunakan pacman.
+Untuk mempermudah proses belajar, saya mencari cheat sheet untuk pacman menggunakan ddg. Hasil pencarian itu, membuahkan hasil yang menarik.</description>
+    </item>
+    
+    <item>
+      <title>Mengganti Akses Github dari HTTPS ke SSH</title>
+      <link>/posts/2017-05-25-mengganti-akes-github-dari-https-ke-ssh/</link>
+      <pubDate>Thu, 25 May 2017 21:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-25-mengganti-akes-github-dari-https-ke-ssh/</guid>
+      <description>Selama ini, aktivitas terkait git selalu saya lakukan over https. Sampai akhirnya saya jenuh setiap kali harus menulis username dan password.
+Kejenuhan nan mengikat itu yang membuat saya akhirnya berpaling dari https ke ssh. memindah akses via https ke ssh sangatlah mudah di git. Setelah kita selesai setup key di mesin kita dan di Github.com, langkah selanjutnya adalah mengubah remote url di mesin lokal.
+Caranya:
+ Buka terminal. Cek remote url yang sekarang:  git remote -v  Output jika masih pakai https:</description>
+    </item>
+    
+    <item>
+      <title>Mencoba Layanan Netlify</title>
+      <link>/posts/2017-05-25-mencoba-layanan-netlify/</link>
+      <pubDate>Thu, 25 May 2017 20:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-25-mencoba-layanan-netlify/</guid>
+      <description>Tempat untuk host static site ada banyak, termasuk static site hasil dari jekyll. Yang sudah saya coba adalah:
+ Github pages, dulu saya gunakan untuk hosting sumarouno.github.io dan sekarang saya pakai untuk custom domain sumarsono.id. Dapat SSL kalau tidak pakai custom domain, free SSL hilang kalau pakai custom domain. Makanya, saya pakai cloudflare agar jadi https. Google Firebase, yang ini saya gunakan untuk host sumarsono.net sebelum saya pindahkan. Enak sebenarnya, free SSL meskipun pakai custom domain.</description>
+    </item>
+    
+    <item>
+      <title>Menambah Tag dalam Situs Jekyll</title>
+      <link>/posts/2017-05-25-menambah-tag-dalam-situs-jekyll/</link>
+      <pubDate>Thu, 25 May 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-25-menambah-tag-dalam-situs-jekyll/</guid>
+      <description>Kemarin pagi, dihari yang cerah nan hangat, terlintas dalam pikiran saya sumarsono.id kalau diberi tagging sepertinya keren.
+Siangnya, di hari nan panas saya mencari referensi dan menemukan situs yang mengerti apa yang ada dalam benak saya kala itu, yakni situsnya charli dan situsnya Pavel D. Awesome.
+Di malam nan dingin merasuk sukma, saya mewujudkan angan. Dari dua referensi, saya menerapkan tagging yang ditulis Pavel D dengan sedikit modifkasi agar pas dengan sumarsono.</description>
+    </item>
+    
+    <item>
+      <title>Membuat Tautan Referensi ke Artikel Lain dalam Jekyll</title>
+      <link>/posts/2017-05-24-membuat-tautan-referensi-ke-artikel-lain-dalam-jekyll/</link>
+      <pubDate>Wed, 24 May 2017 15:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-24-membuat-tautan-referensi-ke-artikel-lain-dalam-jekyll/</guid>
+      <description>Ketika kita menulis artikel untuk website, ada kalanya kita akan membuat referensi ke artikel lain yang pernah kita tulis. Jekyll pun bisa melakukan hal tersebut.
+Nah, dulu saya menggunakan cara seperti ini:
+[artikel anu]({{ site.url }}/2017/04/18/anu-ini-inu-uni/  Menggunakan cara seperti itu, tentu saja bisa. Namun, akan ada kendala ketika kita mengubah permalink situs kita.
+Bagaimana caranya agar referensi yang kita buat bisa otomatis mengikuti permalink situs kita? Ternyata jekyll memiliki fitur ini.</description>
+    </item>
+    
+    <item>
+      <title>Memasang Wall Facelet cat53 Panasonic</title>
+      <link>/posts/2017-05-22-memasang-wall-facelet-cat5e-panasonic/</link>
+      <pubDate>Mon, 22 May 2017 18:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-22-memasang-wall-facelet-cat5e-panasonic/</guid>
+      <description>Saya belajar cara memasang konektor wall facelet CAT5e sudah sangat lama, yakni ketika duduk dibangku SMK. Setelah sekian lama, baru hari ini ilmu itu saya terapkan dalam bentuk nyata bukan sekedar latihan.
+Hari ini, saya memasang wall facelet CAT5e merk Panasonic. Tujuan pemasangannya adalah biar instalasi kabel LAN bisa rapi.
+Biasanya, dalam memasang kabel LAN semacam ini kita butuh D Impact tool, atau ada yang menyebutnya cable knock down tool.</description>
+    </item>
+    
+    <item>
+      <title>Jekyll Plugin untuk Atom</title>
+      <link>/posts/2017-05-21-jekyll-plugin-untuk-atom/</link>
+      <pubDate>Sun, 21 May 2017 16:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-21-jekyll-plugin-untuk-atom/</guid>
+      <description>Atom mempunyai plugin untuk jekyll. Berikut ini skriksutnya: Tapi, saya pribadi lebih memilih plugin markdown editor daripada plugin jekyll. Markdown editor sudah ada fitur untuk jekyll di dalamnya.</description>
+    </item>
+    
+    <item>
+      <title>Flash Boot Android Menggunakan Fastboot</title>
+      <link>/posts/2017-05-20-flash-boot-android-menggunakan-fastboot/</link>
+      <pubDate>Sat, 20 May 2017 23:00:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-20-flash-boot-android-menggunakan-fastboot/</guid>
+      <description>Melanjutkan artikel membongkar boot.img
+Sekarang akan saya bahas cara flash file new-boot.img yang telah dibuat, metode yang saya pakai adalah menggunakan fastboot karena sangat mudah.
+ Aktifkan usb debugging di hp Tancapkan ke laptop Buka Terminal cd ke lokasi new-boot.img reboot HP ke mode fastboot  adb reboot-bootloader   Setelah muncul tulisan fastboot di layar HP, jalankan perintah ini:  fastboot flash boot new-boot.img  Hanya butuh beberapa detik untuk selesai</description>
+    </item>
+    
+    <item>
+      <title>Disable Tombol Kapasitip HP Android ROM CM13-Google-Seed</title>
+      <link>/posts/2017-05-20-disable-tombol-kapasitip-hp-android-rom-cm13-google-seed/</link>
+      <pubDate>Sat, 20 May 2017 22:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-20-disable-tombol-kapasitip-hp-android-rom-cm13-google-seed/</guid>
+      <description>Bosan menggunakan tombol fisik? ingin ganti ke softkey? sudah ganti tapi tombol fisik terasa annoying?
+Mudah saja. Disable aja tombol kapasitipnya. Caranya? check this out:
+ Hubungkan HP ke Laptop Aktifkan USB Debugging di HP Buka Termninal Jalankan perintah adb shell dan minta hak ases root:  adb shell su  Edit file Generic.kl:  vim /system/usr/keylayout/Generic.kl  Cari tulisan:
+ key 139 MENU key 172 HOME key 158 BACK  Kemudian beri tanda # didepannya</description>
+    </item>
+    
+    <item>
+      <title>Bongkar boot.img Android di Fedora 25</title>
+      <link>/posts/2017-05-20-bongkar-boot.img-android-di-fedora-25/</link>
+      <pubDate>Sat, 20 May 2017 21:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-20-bongkar-boot.img-android-di-fedora-25/</guid>
+      <description>Hari ini saya mendapati custom ROM Android yang /system nya termount ro atau read only. Padahal saya mau edit file ini di system.
+Usut punya usut, agar /system termount dalam mode rw harus bongkar boot.img. Untungnya sudah ada yang membuat bash script untuk unpack dan repack boot.img
+ Unduh disini lalu ekstrak Copy paste file boot.img ke dalam folder mktool jalankan ./mktool  Pilih 2 dan masukan nama file boot.img nya.</description>
+    </item>
+    
+    <item>
+      <title>Atom - Powerfull Markdown Editor di Fedora 25</title>
+      <link>/posts/2017-05-20-atom-powerfull-markdown-editor-di-fedora-25/</link>
+      <pubDate>Sat, 20 May 2017 20:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-20-atom-powerfull-markdown-editor-di-fedora-25/</guid>
+      <description>Dulu, kali pertama mencoba Atom sewaktu awal-awal rilis. Rasanya tidak enak jika dibandingkan text editor lainnya. Setelah sekian lama, akhirnya hari ini saya unduh Atom dan mencoba lagi, beda sekali rasanya, sekarang lebih smoot.
+Alasan kenapa hari ini mencoba Atom adalah untuk mencoba menggunakannya debagai Markdown editor. Ternyata lumayan ciamik. Fitur yang saya suka adalah markdown preview, jadi bisa melihat langsung hasil markdown yang kita tulis.
+Untuk mengaktifkan fitur tersebut cukup klik Packages &amp;gt; Markdown Preview &amp;gt; Toggle Preview atau dengan shortcut Ctrl + Shift + M</description>
+    </item>
+    
+    <item>
+      <title>Fedora Ala-ala Winten</title>
+      <link>/posts/2017-05-18-fedora-ala-ala-winten/</link>
+      <pubDate>Thu, 18 May 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-18-fedora-ala-ala-winten/</guid>
+      <description>Jenuh dengan tampilan Fedora yang default (Gnome3)? Saya, pagi ini tidak sengaja nemu artikel di omgubuntu yang membahas gnome-layout-manager.
+Nah, gnome layout manager ini, merupakan skrip yang dibuat oleh bill mavromatis untuk mengubah layout gnome3. Skrip ini menawarkan 3 layout: Windows 10, Ubuntu Unity, dan MacOS.
+Penasaran, saya coba download skripnya disini. Dan mengikuti panduan yang ada disana.
+Nah, ini hasilnya: </description>
+    </item>
+    
+    <item>
+      <title>Membeli Nokia 150</title>
+      <link>/posts/2017-05-17-membeli-nokia-150/</link>
+      <pubDate>Wed, 17 May 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-17-membeli-nokia-150/</guid>
+      <description>Beberapa waktu yang lalu, saya ingin beli featured phone. Tujuan saya beli jenis hp ini adalah untuk saya tinggal dirumah agar dipakai emak. Emak saya tidak bisa baca tulis, tapi bisa diajari untuk menerima panggilan telepon.
+Setelah browsing, featured phone murah-murah harganya, harga terendah yang saya dapati 90rb. Sebelumnya, pernah beli harga 100rb merk X, sudah rusak.
+Akhirnya saya putuskan untuk beli Nokia 150 seharga 370rb. Dalam hati bertanya-tanya, apakah Nokia masih sebandel (dalam artian awet) dulu?</description>
+    </item>
+    
+    <item>
+      <title>Menjaga Versi Kernel Tertentu Agar tidak Terhapus Ketika Update Fedora</title>
+      <link>/posts/2017-05-16-menjaga-versi-kernel-tertentu-agar-tidak-terhapus-ketika-update-fedora/</link>
+      <pubDate>Tue, 16 May 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-16-menjaga-versi-kernel-tertentu-agar-tidak-terhapus-ketika-update-fedora/</guid>
+      <description>Secara default, Fedora 25 akan menjaga 3 versi kernel di mesin kita. Ketika ada pembaruan versi kernel, maka versi kernel terendah akan terhapus.
+Ada kalanya karena suatu keperluan, kita perlu menjaga suatu versi kernel tertentu agar tidak terhapus ketika melakukan dnf update. Berikut ini caranya:
+ Kita list dulu daftar kernel yang terpasang di mesin kita, dari terminal kita jalankan:  rpm -qa kernel  Nah, nanti akan keluar daftar kernel yang terpasang, contohnya di saya:</description>
+    </item>
+    
+    <item>
+      <title>Mencoba Oh My Zsh</title>
+      <link>/posts/2017-05-07-mencoba-oh-my-zsh/</link>
+      <pubDate>Sun, 07 May 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-07-mencoba-oh-my-zsh/</guid>
+      <description>Melanjutkan tulisan tentang zsh disini. Jika teman-teman mengikuti artikel tersebut, pasti tampilan zsh -nya biasa-biasa aja. Nah, pada artikel ini akan saya sampaikan bagaimana agar shell zsh jadi cantik.
+Caranya adalah dengan memasang oh-my-zsh. Simple aja, eksekusi command berikut di terminal:
+wget --no-check-certificate http://install.ohmyz.sh -O - | sh Nah untuk mengganti tema, cukup edit file .zshrc di /home.
+nano ~/.zshrc Cari baris
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes ZSH_THEME=&amp;#34;robbyrussell&amp;#34; Kemudian ganti robbyrussell dengan tema lain, misalnya :</description>
+    </item>
+    
+    <item>
+      <title>Mencoba Zsh di Fedora 25</title>
+      <link>/posts/2017-05-07-mencoba-zsh-di-fedora-25/</link>
+      <pubDate>Sun, 07 May 2017 18:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-07-mencoba-zsh-di-fedora-25/</guid>
+      <description>Berawal dari perbincangan di group telegram, Saya jadi ingin mencoba (lagi) ZSH untuk menggantikan BASH. Salah satu yang saya suka dari ZSH adalah tampilannya yang menarik, ditambah lagi dengan adanya Oh My Zsh.
+Mengganti BASH dengan ZSH di Fedora 25 terbilang cukup mudah, berikut ini caranya:
+ Install paket zsh dan util-linux-user. Dari util-linux-user kita butuh chsh untuk me-replace bash dengan zsh.  sudo dnf install zsh util-linux-user   Ganti bash menjadi zsh dengan cara:  chsh -s /usr/bin/zsh   Tutup terminal dan buka lagi, bash sudah tergantikan oleh zsh  Nah, next time kita bahas oh my zsh.</description>
+    </item>
+    
+    <item>
+      <title>Memperbaiki Touchpad Error di Fedora</title>
+      <link>/posts/2017-04-27-memperbaiki-touchpad-error-di-fedora/</link>
+      <pubDate>Thu, 27 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-04-27-memperbaiki-touchpad-error-di-fedora/</guid>
+      <description>Beberapa waktu yang lalu, saya jenuh dengan GNOME. Oleh sebab itu saya memasang PLASMA. Namun apa daya, itu hanya pelarian sesaat. Akhirnya saya memutuskan untuk membuang plasma dan kembali ke gnome.
+Proses balikan ini tidak berjalan mulus, setelah saya remove plasma kemudian set gdm over sddm kemudian reboot, startx gagal start. Hal ini disebabkan karena komponen gnome ada yang hilang terbawa plasma yang saya buang. Okelah tidak apa-apa, saya install gnome lagi.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-04-17-memperbaiki-tampilan-emoji-di-gh-page/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-04-17-memperbaiki-tampilan-emoji-di-gh-page/</guid>
+      <description>Setelah berhasil memasang jemoji , ternyata ada kendala, tampilan emojinya terlalu GEDE :laughing:
+Akhirnya saya tanyakan ke group pegelinux, disana dapat solasi :laughing:. Disarankan untuk mengatur ukurannya via css.
+Akhirnya saya tambahkan di file css:
+emoji { display: inline-block; height: 1em; width: auto; } contoh penggunaanya di post: :+1: nanti jadi :+1:
+dan tara&amp;hellip;selesai, emoji tampil dengan normal, :+1:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-04-17-menambah-emoji-di-gh-page/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-04-17-menambah-emoji-di-gh-page/</guid>
+      <description>Sebenarnya ini iseng aja, :laughing: Biar static page punya saya kece saya menambah emoji kesini.
+Nah, saya tulis saja pengalaman itu kesini, biar blog ini ada isinya.
+Check this out Untuk menambah emoji kita akan memanfaatkan jemoji , nah yang pertama harus dilakukan adalah edit file _config.yml : gems: - jemoji
+Next, push ke repo gh-pages kita. Dan coba bikin emoji post kita misalnya emoji ketawa :laughing:
+Profit.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-04-18-menambah-tombol-navigasi-next-archive-previous-di-jekyll/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-04-18-menambah-tombol-navigasi-next-archive-previous-di-jekyll/</guid>
+      <description>Beberapa hari ini, saya mainan static site dengan memanfaatkan jekyll dan gh-page.
+Nah hari ini, setelah saya lihat-lihat static site saya ada yang kurang. Dulu pas main wordpress ada yang namanya next post sama previous post.
+Oleh karena itu, hari ini saya menambahkan fitur itu.
+Check this out  edit _layouts/post.html . Tambahkan sebelum &amp;lt;/article&amp;gt; biar lokasinya ada dibawah konten utama: {% raw %}
+&amp;lt;div class=&amp;#34;PageNavigation&amp;#34;&amp;gt; {% if page.previous.url %} &amp;lt;a class=&amp;#34;prev&amp;#34; href=&amp;#34;{{page.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-04-25-menambah-tombol-navigasi-next-archive-previous-di-jekyll-bagian-ii/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-04-25-menambah-tombol-navigasi-next-archive-previous-di-jekyll-bagian-ii/</guid>
+      <description>Pada artikel sebelumnya, sudah ditulis caranya. Namun, saya kurang puas dengan hasilnya.
+Nah, suatu ketika saya berkunjung ke blog teman, navigasinya bagus eui.. bentuknya tombol. Kemudian saya putuskan untuk meniru dari blog teman saya. Berikut ini source code nya: {% raw %}
+&amp;lt;div class=&amp;#34;page-navigation&amp;#34;&amp;gt; &amp;lt;ul&amp;gt; {% if page.previous %} &amp;lt;li class=&amp;#34;previous&amp;#34;&amp;gt;&amp;lt;a href=&amp;#34;{{page.previous.url}}&amp;#34; title=&amp;#34;{{ page.previous.title }}&amp;#34;&amp;gt;&amp;amp;larr; Previous&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; {% else %} &amp;lt;li class=&amp;#34;previous disabled&amp;#34;&amp;gt;&amp;lt;a&amp;gt;&amp;amp;larr; Previous&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; {% endif %} &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;{{site.baseurl}}/archive/&amp;#34;&amp;gt;Archive&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; {% if page.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-05-25-hari-yang-panas/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-05-25-hari-yang-panas/</guid>
+      <description>Hari yang panas, melelehkan daku.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-09-30-mencoba-jekyll-admin/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-09-30-mencoba-jekyll-admin/</guid>
+      <description>Apa itu Jekyll-admin? Bagaimana cara install-nya? Bagaima cara menggunakannya?
+Silakan klik DISINI</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-09-30-pengalalaman-belanja-di-aliexpress-pembayaran-menggunakan-debit-btn/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-09-30-pengalalaman-belanja-di-aliexpress-pembayaran-menggunakan-debit-btn/</guid>
+      <description>Saya ingin membeli Lithium Battery Pack Expansion Board Power Supply with Switch untuk Raspberry Pi. Cari di olshop nasional, ada. Tapi harganya waw bikin tercenging, mahal beud. Coba cari di aliexpress, waw harganya selisih banyak, 50% lebih murah daripada di olshop nasional. Free ongkir pula. Saya putuskan untuk membeli dari aliexpress.
+Mau bayar pakai apa? Dokuwallet sudah tida bisa dipakai karena harus upload KTP ke alipay untuk verifikasi. Males. Akhirnya saya memberanikan diri bayar pakai kartu debit BTN.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-10-01-setup-raspberry-pi-super-headless/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-10-01-setup-raspberry-pi-super-headless/</guid>
+      <description>Kok super headless? Kasusnya begini, kita punya: 1. Raspberry Pi 3 2. Kabel LAN 3. Flashdisk Sandisk 4GB 4. Adaptor 5V3A 5. Laptop 6. USB TTL
+Saya sebut super headless karena raspi akan saya setup tanpa DHCP server.
+Langkah-langkahnya  Download OS untuk raspberry pi, Raspbian Lite DISINI. Restore image raspbian ke flashdisk, terserah mau pakai tool apa, dd, gnome-disk, etcher. Setelah selesai, akan muncul partisi boot dari flashdisk, buka saja.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-10-17-mengatasi-error-import-gobject-ketika-menjalankan-hp-setup-di-arch-linux/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-10-17-mengatasi-error-import-gobject-ketika-menjalankan-hp-setup-di-arch-linux/</guid>
+      <description>Pagi ini, ketika saya mau setup printer merk HP muncul error seperi berikut ini:
+[sumarsono@mesin-arch ~]$ hp-setup HP Linux Imaging and Printing System (ver. 3.17.9) Printer/Fax Setup Utility ver. 9.0 Copyright (c) 2001-15 HP Development Company, LP This software comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to distribute it under certain conditions. See COPYING file for more details. Traceback (most recent call last): File &amp;#34;/usr/bin/hp-setup&amp;#34;, line 313, in &amp;lt;module&amp;gt; ui = import_module(ui_package + &amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-10-24-mudah-bypass-password-windows-10/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-10-24-mudah-bypass-password-windows-10/</guid>
+      <description>Gambar 1: utilman.exe (https://www.online-tech-tips.com/) {: style=&amp;ldquo;color:gray; font-size: 80%; text-align: center;&amp;ldquo;}
+Mungkin, kelak akan kita akan mengalami keadaan tidak bisa login ke desktop Windows 10 karena lupa password. Akan tetapi keadaan memaksa kita untuk dapat masuk. Untuk bypass password login Windows 10, ada banyak cara. Apa yang saya tulis disini hanyalah salah satunya. Tentunya sudah saya lakukan, karena tulisan ini saya maksudkan untuk &amp;ldquo;jika saya lupa&amp;rdquo;. Solusi yang saya tulis disini yaitu memanfaatkan utilman.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-10-27-jekyll-trik-untuk-image-caption/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-10-27-jekyll-trik-untuk-image-caption/</guid>
+      <description>Hari ini, saya ingin menaruh gambar dalam artikel dengan tampilan seperti ini: Saya, tidak tahu cara yang &amp;ldquo;benar&amp;rdquo; dalam jekyll, sehingga saya membuatnya seperti ini:
+![utilman.png]({{ site.baseurl }}/assets/img/utilman.png)Gambar 1: utilman.exe (https://www.online-tech-tips.com/){: style=&amp;#34;color:gray; font-size: 80%; text-align: center;&amp;#34;} Profit, hasilnya dapat dilihat disini
+Referensi: https://stackoverflow.com/questions/28294959/jekyll-kramdown-how-to-center-text</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-10-29-mudah-konversi-skema-gpt-ke-mbr/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-10-29-mudah-konversi-skema-gpt-ke-mbr/</guid>
+      <description>Apa itu GPT? Apa itu MBR? Silakan surfing saja untuk mencari tahu tentang GPT dan MBR.
+Kronologi Si A membeli HDD 500GB seken, untuk mengganti HDD laptopnya yang rusak. Setelah dipasang, mau diinstall Windows 7. Ternyata ditengah jalan muncul error yang intinya Windows tidak dapat diinstall di HDD tersebut. Usut punya usut, pemilik sebelumnya memformat HDD tsb. dengan skema GPT. Kalau begitu, harus di konversi ke MBR.
+Kendala  Tidak ada komputer lain Tidak punya bootable OS selain installer Windows 7  Solusi  Di Wizard installer window 7, tekan shift + F10 Jalankan diskpart  diskpart  List disk  list disk  Pilih disk yang mau dikonversi  select disk 0  Clean untuk menghapus semua partisi dan dari disk yang terpilih  clean  Konversi ke MBR  convert mbr  Reboot Profit  Sudah gitu aja</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-11-05-telegram-desktop-multiple-instances/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-11-05-telegram-desktop-multiple-instances/</guid>
+      <description>Punya dua nomor HP? Setiap nomor dibuatkan akun telegram? Ingin login dua-duanya dalam satu komputer?
+Jika jawaban pertanyaan diatas adalah iya, caranya mudah.
+Telegram -many -workdir &amp;#34;/path/nomor1/&amp;#34; Telegram -many -workdir &amp;#34;/path/nomor2/&amp;#34; Sumber: https://github.com/telegramdesktop/tdesktop/issues/533</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-11-10-kde-yang-sekarang-bukan-kde-yang-dulu/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-11-10-kde-yang-sekarang-bukan-kde-yang-dulu/</guid>
+      <description>Gambar 1: Monitoring resource usage KDE Plasma {: style=&amp;ldquo;color:gray; font-size: 80%; text-align: center;&amp;ldquo;}
+Setelah sekian lama menjadi pengguna GNOME, akhirnya saya coba berpaling dan menjajal KDE. Wow, saya tercengang KDE yang sekarang beda sekali dengan KDE yang dulu. Lihat skrinsut di atas, cakep menurut saya. Terlebih konsumsi RAM-nya lebih kecil dibandingkan dengan GNOME, imo. Meskipun ada yang bilang RAM itu dibeli untuk dipakai, bukan untuk dianggurin. Namun demikian, Saya masih belum nyaman mengikuti workflow KDE.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-11-24-virtualbox-mengatasi-nerwork-adapter-2-tidak-mendapatkan-ip-address-dari-dhcp-server/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-11-24-virtualbox-mengatasi-nerwork-adapter-2-tidak-mendapatkan-ip-address-dari-dhcp-server/</guid>
+      <description>Hari ini, saya mainan virtualbox dengan setup sebagai berikut: - Sistem operasi: Ubuntu 16.04 - Network Adapter 1: NAT - Network Adapter 2: Host-Only adapter - Host only adapter sudah diset sebagai DHCP Server
+Masalah Setelah selesai Intsall sistem operasi, ternyata adapter 2 tidak mendapatkan IP Address.
+Solusi  Cek apakah network adapater 2 terdeteksi oleh sistem,  ip link  Catat outputnya, misal adapter 1 terdeteksi sebagai ens0p3 dan adapter 2 tereteksi sebagai ens0p8.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-11-28-instalasi-microsoft-office-2010-di-debian-9/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-11-28-instalasi-microsoft-office-2010-di-debian-9/</guid>
+      <description>Debian 9 hadir dengan Office Suite bernama LibreOffice, namun demikian tak dapat kita pungkiri bahwa dalam dunia Office Suite, Microsoft Office adalah rajanya. Kalau untuk keperluan pribadi, mungkin LibreOffice sudah cukup untuk memenuhi kebutuhan. Tapi akan menjadi lain cerita kalau menyangkut urusan pekerjaan, menyangkut khalayak banyak, dokumen yang kita olah harus dapat dibuka oleh orang lain. Sayangnya kompatibilitas LO terhadap MSO dan sebaliknya, belum cukup bagus. Oleh sebab itu, dalam artikel ini akan dibahas cara instalasi MSO 2010 di sistem operasi Debian 9 dengan bantuan program PlayOnLinux.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-12-01-menautkan-kalender-google-ke-korganizer-kde/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-12-01-menautkan-kalender-google-ke-korganizer-kde/</guid>
+      <description>Untuk menautkan kalender Google ke KOrganizer KDE, sangatlah mudah. Caranya: 1. Buka KOrganizer 2. Klik Settings &amp;gt; Configure KOrganizer&amp;hellip; 3. Klik General &amp;gt; Calendars 4. Klik tombol Add&amp;hellip; kemudian cari dengan kata kunci Google 5. Ikuti wizard dari Google 6. Profit
+ Google is your friend, jangan berpaling darinya.
+ </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-12-01-resize-aplikasi-microsoft-office-2010-di-wine/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-12-01-resize-aplikasi-microsoft-office-2010-di-wine/</guid>
+      <description>Microsoft Office 2010 yang saya pasang dengan bantuan Wine, so far so good. Fungsi-fungsi yang saya butuhkan berjalan sebagaimana mestinya. Tapi, ada sesuatu yang aneh walaupun tidak mengganggu pekerjaan, yaitu Aplikasi MSO tidak bisa di resize menggunakan tombol resize di tittle bar. Misal saya buka Ms Word, ketika saya klik resize maka akan mengecil, ketika saya klik rezie sekali lagi, tidak terjadi apa-apa, seharusnya jadi maximize.
+Ternyata, hal tersebut berkaitan dengan window manager dari DE.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2017-12-17-autocutoff-charging-menggunakan-arduino/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-12-17-autocutoff-charging-menggunakan-arduino/</guid>
+      <description>HP menjadi sebuah kebutuhan primer, saya tidak menyangkalnya. Hampir 24 jam setiap hari HP selalu ada di dekat saya. Bicara soal HP, tidak lepas dari baterai dan charging. Biasanya HP saya, biasa hidup dari jam 3 pagi, sampai jam 12 malam. Waktu antara 00:00 - 03:00, saya gunakan untuk charging, karena itu pas dengan jam istirahat. Namun demikian, sering terjadi hal-hal luar biasa, misalnya saya tidur jam 20:00 atau jam 21:00 karena lelah setelah aktivitas siang hari.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-01-18-aktivasi-windows-7-pro-oem-melalui-jalur-telepon/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-01-18-aktivasi-windows-7-pro-oem-melalui-jalur-telepon/</guid>
+      <description>I have a laptop that came with Windows 7 Pro, preinstalled. Laptop ini harddisknya sudah saya partisi ulang dan saya pasang sistem operasi GNU/Linux, mulai dari Fedora, Manjaro, Arch, dan terakhir Debian 9 (semoga pembuatnya tenang di alam sana,he has given the great OS to the world). Dan sekarang, saya ganti HDD tsb dengan SSD, dan saya berniat untuk menggunakan OS bawaanya yaitu Windows 7 Pro.
+Sejauh proses penggantian hingga aktivasi, tidak ada kendala sama sekali.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-01-18-setup-vagrant-di-windows-7-pro-x64/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-01-18-setup-vagrant-di-windows-7-pro-x64/</guid>
+      <description>Di Windows, hampir semua yang terkait dengan pemasangan aplikasi sangatlah mudah, next next next finish. Seperti itu kira-kira gambaran yang ada dalam otak saya dan saya tuangkan dalam tulisan tak mutu ini. Beberapa hari yang lalu, saya mencoba setup vagrant di Windows 7. Instalasi sungguh tidak ada kendala, lancar jaya. Tetapi, kendala justru muncul ketika vagrant up, bengong, tidak ada reaksi, ditunggu sampai lumutan juga tidak membuahkan hasil, layaknya menunggu jawaban dari doi (bukan pengalaman saya).</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-01-29-client-to-server-c2s-port-forwarding-menggunakan-bitvise-ssh-client/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-01-29-client-to-server-c2s-port-forwarding-menggunakan-bitvise-ssh-client/</guid>
+      <description>Sebenarnya, ini merupakan hal yang sederhana, alkisah saya punya server kecil. Di server tersebut, ada sebuah anuan yang menggunakan port ABCD dan EFGH. Saya ingin akses anuan tersebut dapat diakses dari komputer lain menggunakan ssh tunnel. Kalau di linux mah gampil , tinggal:
+ssh &amp;quot;remote-IP&amp;quot; -p &amp;quot;remote-ssh-port&amp;quot; -L BLABLA:localhost:ABCD -L BLILI:localhost:EFGH -l &amp;quot;ssh-user&amp;quot;  BLABLA = port lokal kita. BLIBLI = port lokal kita. Jadi ketika kita akses localhost:BLABLA akan lari ke remote-IP:ABCD.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-02-02-kamera-bokeh-ala-ala-google-camera/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-02-02-kamera-bokeh-ala-ala-google-camera/</guid>
+      <description>Mmmm, pernah dengar kamera bokeh? Pernah dengar istilah dual cam di smartphone mahal? Pasti pernah lah ya, nak milenial, nak gaul, nak kekinian.
+Untuk hasil jepretan kamera yang bokeh, tidak harus dual cam sih, bisa kok bokeh ala-ala software. Pakai fitur potrait google camera misalnya. Beruntungnya, google camera sudah di port untuk device lain oleh orang-orang pintar dan baik hati di luar sana. Linknya? kemari aja https://www.celsoazevedo.com/files/android/google-camera/
+Minta sample hasil jepret?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-03-19-mengganti-ip-standar-ics-windows-7/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-03-19-mengganti-ip-standar-ics-windows-7/</guid>
+      <description>Windows 7 memiliki fitur Internet Connection Sharing (ICS), yaitu sebuah fitur yang memungkinkan kita untuk membagi koneksi internet dari satu adapter ke adapter lain. Bukan fitur yang wah, sih. Di distribusi linux rasanya fitur tersebut lebih mantab soul. Alhail GNU/Linux.
+Secara default IP hasil konfigurasi ICS adalah 192.168.137.x, bagaimana caranya agar ip default-nya bukan ip tsb? Berikut ini caranya: 1. Masuk Registry Editor 2. Pada panel kiri, cari:
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\SharedAccess\Parameters   Setelah itu, pada bagian panel kanan akan akan ada Scope Address dan StandAloneDHCPAddress, ubah nilai dari dua paramater tsb dengan ip address yg kita kehendaki.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-03-27-mencicipi-miui-global-dev/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-03-27-mencicipi-miui-global-dev/</guid>
+      <description>This is, sad story&amp;hellip;.
+Hari ini, rasa penasaran terhadap MIUI Global Dev muncul dalam kalutnya hati. Rasa itu hanya bisa diobati dengan mencicipi. Terunduhlah file sebesar 1,5GB ke dalam penyimpanan HP. 1. Reboot ke TWRP. 2. Wipe system, data, cache dan dalvic cache. 3. Flash zip file miui global dev, eh auto reboot (dalam benak, wah shit happen jangan2). 4. Saya tunggu beberapa menit, kok tidak sampai setup wizard miui 9, muncul getar 3x.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-06-29-selamat-idulfitri/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-06-29-selamat-idulfitri/</guid>
+      <description>Terlambat, akan tetapi tak mengapa. Saya mengucapkan selamat Idulfitri 1439H. Mohon maaf lahir dan batin. :smile: Terima kasih</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-06-30-move-on-life-must-go-on/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-06-30-move-on-life-must-go-on/</guid>
+      <description>Saya memutuskan untuk mengubah beberapa hal. Beberapa diantaranya adalah sebagai berikut: 1. Mengubah username github github.com/sumarouno terasa sulit diucap, itu sebabnya saya ubah ke github.com/unomind. Berdampak pada gh-pages juga, semula sumarouno.github.io menjadi unomind.github.io
+ Meninggalkan disquss Apakah karena jelek? Tidak. Disquss sangat mumpuni sebagai commenting system. Hanya saja saya merasa tidak cocok. Terlebih lagi telah lahir agregator pegelinux. Silakan berkomentar disana.
+ Perubahan lain Saya rasa yang ini menjadi part of my life yang belum bisa saya tulis.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-07-01-free-upgrade-windows-7-pro-oem-ke-windows-10/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-07-01-free-upgrade-windows-7-pro-oem-ke-windows-10/</guid>
+      <description>&amp;ldquo;Sesungguhnya, Windows adalah hidayah jika kamu mengetahui&amp;rdquo; - Teman
+ Ms. Windows merupakan sistem operasi sejuta umat, tidak diragukan lagi. Bahkan, Microsoft menawarkan upgrade gratis ke Windows 10 bagi konsumen yang mempunyai lisensi Windows. Sebenarnya sudah sejak lama, tapi kala itu saya masih menikmati Windows 7, selain alasan habbit juga karena ada aplikasi dari vendor PLC yang tidak berjalan sebagaimana mestinya jikan dijalankan di sistem operasi yang lebih tinggi dari Windows 7.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-07-02-setelah-install-windows-10/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-07-02-setelah-install-windows-10/</guid>
+      <description>WSL tentunya, sejak awal digaungkan, saya memang penasaran dengan Windows Subsystem for Linux. Setelah selesai upgrade dari win7 ke win10, langsung login menggunakan akun yang terdaftar di Microsoft, membuka Windows store, dan langsung cari linux.
+Banyak sekali opsinya, tapi saya mau jajal ubuntu saja, alasannya ya karena anuan ubuntu ini ada kedekatan dengan anuan Ms. Langsung install, dan jangan lupa aktifkan fitur Windows Subsystem for Linux. So far so good, cuma lokasi / yang agak nganu, coba saja nanti juga tahu sendiri :laugh:</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-09-17-shelter-isolate-your-big-brother-app-multiple-accounts/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-09-17-shelter-isolate-your-big-brother-app-multiple-accounts/</guid>
+      <description>Hari ini secara tidak sengaja saya menemukan sebuah aplikasi yang menarik. Berawal dari ketika saya mengunjungi /r/LineageOS/. Disana ada yang merekomendasikan sebuah aplikasi, yakni Shelter. Apa itu Shelter? berikut ini saya kutip dari deskripsi di repo f-droid: &amp;gt; Shelter is a Free and Open-Source (FOSS) app that leverages the “Work Profile” feature of Android to provide an isolated space that you can install or clone apps into.
+ Shelter comes with absolutely no advertisement / statistics / tracking SDKs bundled with it.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-09-27-sailfish-os-untuk-mido/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-09-27-sailfish-os-untuk-mido/</guid>
+      <description>Awalnya ingin porting Sailfish OS untuk Redmi Note 4 (Mido), akan tetapi saya urungkan karena di XDA sudah ada yang melakukan hal yang sama. Dia juga aktif di forum sailfish porter, bisa disebut dia kontribusi banyak. Jadi ya why i must reinvent the wheel. Terimakasih untuk kerja kerasnya, sehingga saya bisa menikmati sailfish os tanpa harus mengorbankan banyak hal.
+Untuk menikmati sailfish di Mido, kita membutuhkan: - TWRP 3.1.1.0 - Firmware/ROM CM14.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-09-29-ekstrak-semua-tautan-dari-sebuah-website-menggunakan-lynx/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-09-29-ekstrak-semua-tautan-dari-sebuah-website-menggunakan-lynx/</guid>
+      <description>Ini adalah cara yang masokis, menggunakan terminal dan lynx. Langsung ke contoh saja, pasti langsung paham
+orangtua@mesin-tua:~/$ lynx -listonly -dump unomind.github.io References Visible links 1. https://unomind.github.io/feed.xml 2. https://unomind.github.io/ 3. https://unomind.github.io/about/ 4. https://unomind.github.io/contact/ 5. https://unomind.github.io/2018/09/29/menjalankan-aplikasi-android-di-sailfish-os/ 6. https://unomind.github.io/2018/09/27/sailfish-os-untuk-mido/ 7. https://unomind.github.io/2018/09/17/shelter-isolate-your-big-brother-app-multiple-accounts/ 8. https://unomind.github.io/2018/07/02/setelah-install-windows-10/ 9. https://unomind.github.io/2018/07/01/free-upgrade-windows-7-pro-oem-ke-windows-10/ 10. https://unomind.github.io/2018/06/30/move-on,-life-must-go-on/ 11. https://unomind.github.io/2018/06/29/selamat-idulfitri/ 12. https://unomind.github.io/2018/03/27/mencicipi-miui-global-dev/ 13. https://unomind.github.io/2018/03/19/mengganti-ip-standar-ics-windows-7/ 14. https://unomind.github.io/2018/02/02/kamera-bokeh-ala-ala-google-camera/ 15. https://unomind.github.io/2018/01/29/client-to-server-c2s-port-forwarding-menggunakan-bitvise-ssh-client/ 16. https://unomind.github.io/2018/01/18/setup-vagrant-di-windows-7-pro-x64/ 17. https://unomind.github.io/2018/01/18/aktivasi-windows-7-pro-oem-melalui-jalur-telepon/ 18. https://unomind.github.io/2017/12/17/autocutoff-charging-menggunakan-arduino/ 19. https://unomind.github.io/2017/12/01/resize-aplikasi-microsoft-office-2010-di-wine/ 20. https://unomind.github.io/2017/12/01/menautkan-kalender-google-ke-korganizer-kde/ 21. https://unomind.github.io/2017/11/28/instalasi-microsoft-office-2010-di-debian-9/ 22. https://unomind.github.io/2017/11/24/virtualbox-mengatasi-nerwork-adapter-2-tidak-mendapatkan-ip-address-dari-dhcp-server/ 23. https://unomind.github.io/2017/11/10/kde-yang-sekarang-bukan-kde-yang-dulu/ 24.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-09-29-embed-pesan-telegram-ke-post-jekyll/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-09-29-embed-pesan-telegram-ke-post-jekyll/</guid>
+      <description>Langsung kemari saja https://core.telegram.org/widgets/posts pasti langsung mengerti.
+Contoh hasilnya: - https://unomind.github.io/2018/09/27/sailfish-os-untuk-mido/ - https://unomind.github.io/2018/09/29/menjalankan-aplikasi-android-di-sailfish-os/</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-09-29-menjalankan-aplikasi-android-di-sailfish-os/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-09-29-menjalankan-aplikasi-android-di-sailfish-os/</guid>
+      <description>Sistem operasi tanpa aplikasi, sungguh laksana piring tanpa nasi. Begitu juga dengan sailfish OS. Kesan pertama memakai sailfish OS &amp;ldquo;WAW&amp;rdquo;, gegas, gesture nikmat, konsisten, UI/UX yang mengesankan. Saya tidak sedang melebih-lebihkan, memang begitu yang saya rasakan. Dan yang paling mencengangkan adalah systemd yang dipakai. Cool.
+Sayang-seribu sayang, dukungan aplikasi di sailfish OS benar-benar minim. Maklum, sistem operasi minoritas. Siapa sih developer yang mau bikin aplikasi tanpa pangsa pasar yang jelas? Wasting time.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-10-09-bikin-distro-linux-menggunakan-rtc-daripada-utc/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-10-09-bikin-distro-linux-menggunakan-rtc-daripada-utc/</guid>
+      <description>Secara default Distribusi GNU/Linux menggunakan patokan UTC untuk date time. Ya bukan masalah sih, tapi kadang jadi mengganggu kalau dualboot dengan sistem operasi besutan Microsoft. Untuk mengetahui apakah sistem kita menggunakan UTC ataukah RTC, bisa gunakan salah satu fitur dari systemd:
+orangtua@mesin-tua:~/unomind.github.io$ timedatectl status Local time: Tue 2018-10-09 19:08:23 WIB Universal time: Tue 2018-10-09 12:08:23 UTC RTC time: Tue 2018-10-09 12:08:21 Time zone: Asia/Jakarta (WIB, +0700) System clock synchronized: yes systemd-timesyncd.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/posts/2018-10-10-cek-badblock-pada-partisi-emmc-android/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2018-10-10-cek-badblock-pada-partisi-emmc-android/</guid>
       <description>Seprti pada umumnya NAND Flash yang sering ditulis, pasti akan mencapai masa muncul bad block. Kalau di HDD sih bad sector. Demikian juga EMMC HP kita. Kebiasaanku yang gonta-ganti custom firmware, gonta-ganti dari filesystem, mungkin menyebabkan bad block pada EMMC. Nah, dalam tulisan ini akan saya tulis bagaimana saya cek bad block di HP saya.
 Untuk kasus saya, HP yang saya pakai adalah Redmi Note 4 Snapdragon a.k.a Mido. Reno4 ada dua varian berdasarkan prosesornya, MTK (Nikel) dan Qualcomm (Mido).</description>
     </item>
     
     <item>
-      <title>Video post</title>
-      <link>/posts/video-post/</link>
-      <pubDate>Fri, 16 Mar 2018 20:18:53 -0500</pubDate>
+      <title></title>
+      <link>/posts/2018-10-14-grub-remember-last-choice/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
       
-      <guid>/posts/video-post/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus eget nunc scelerisque viverra. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pharetra magna ac placerat vestibulum lectus mauris. Eget lorem dolor sed viverra ipsum. Elementum nisi quis eleifend quam adipiscing. Aliquet nec ullamcorper sit amet risus. Auctor neque vitae tempus quam pellentesque. Tincidunt lobortis feugiat vivamus at augue.</description>
+      <guid>/posts/2018-10-14-grub-remember-last-choice/</guid>
+      <description>Informasi konfigurasi grub dapat diakses melalui perintah info -f grub -n &#39;Simple Configurtaion&#39;. Untuk membuat grub menyimpan pilihan terakhir, kita harus menyunting berkas /etc/default/grub, 1. edit baris GRUB_DEFAULT=0 menjadi GRUB_DEFAULT=saved 2. Tambahkan baris GRUB_SAVEDEFAULT=true Secara keseluruhan berikut ini milik saya:
+GRUB_DEFAULT=saved GRUB_SAVEDEFAULT=true GRUB_TIMEOUT_STYLE=hidden GRUB_TIMEOUT=10 GRUB_DISTRIBUTOR=`lsb_release -i -s 2&amp;gt; /dev/null || echo Debian` GRUB_CMDLINE_LINUX_DEFAULT=&amp;quot;splash quiet&amp;quot; GRUB_CMDLINE_LINUX=&amp;quot;&amp;quot;   Update grub, kalau keluarga debian bisa pakai update-grub, kalau fedora bisa pakai grub-mkconfig  </description>
     </item>
     
     <item>
-      <title>Long Form Post</title>
-      <link>/posts/long-form-post/</link>
-      <pubDate>Thu, 08 Mar 2018 20:18:53 -0500</pubDate>
+      <title></title>
+      <link>/posts/2018-11-08-batch-rename-files-extension-from-bash/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
       
-      <guid>/posts/long-form-post/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus eget nunc scelerisque viverra. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pharetra magna ac placerat vestibulum lectus mauris. Eget lorem dolor sed viverra ipsum. Elementum nisi quis eleifend quam adipiscing. Aliquet nec ullamcorper sit amet risus. Auctor neque vitae tempus quam pellentesque. Tincidunt lobortis feugiat vivamus at augue.</description>
+      <guid>/posts/2018-11-08-batch-rename-files-extension-from-bash/</guid>
+      <description>Untuk suatu keperluan, terkadang kita perlu melakukan batch rename untuk banyak file. Dalam kasus ini saya ingin rename file dengan ekstensi yang seragam, dan outputnya juga seragam. Yaitu *.log menjadi *.md.
+Untuk praktik, kita bisa membuat file yang banyak terlebih dahulu, misalnya 1.log - 50.log
+mkdir latihan cd latihan jalankan skrip dibawah ini, untuk membuat file 1.log - 50.log. Jadi nanti akan ada 50 file:
+for i in {1..50}; do touch $i.</description>
     </item>
     
     <item>
-      <title>Image post</title>
-      <link>/posts/image-post/</link>
-      <pubDate>Mon, 19 Feb 2018 12:41:46 -0500</pubDate>
+      <title>Meet My Pi</title>
+      <link>/posts/2017-04-14-meet-my-pi-3/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
       
-      <guid>/posts/image-post/</guid>
-      <description>Hello! I&amp;rsquo;m a blog post with an image.</description>
+      <guid>/posts/2017-04-14-meet-my-pi-3/</guid>
+      <description>Belum lama ini, keinginan saya untuk meminang raspberry pi 3 terkabul. Tulisan ini akan berisi apa saja yang saya lakukan pertama kali bersama raspberry pi 3, semacam malam pertama.
+Memberi Nafkah Yap, yang pertama adalah memberinya nafkah, berupa adaptor 5V 3A. Ini penting karena raspi 3 tidak bisa hidup tanpanya.
+Memberinya asupan yang baik Selanjutnya saya memberinya asupan makanan berupa raspbian. Raspbian yang tersedia ada versi Pixel dan versi Lite.</description>
+    </item>
+    
+    <item>
+      <title>Menjalankan Tg CLI di Raspberry Pi 3</title>
+      <link>/posts/2017-04-16-menjalankan-tg-cli-di-raspberry-pi-3/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-04-16-menjalankan-tg-cli-di-raspberry-pi-3/</guid>
+      <description>Telegram, platform chat yang cukup populer. Ada yang menarik dari telegram ini, yaitu tersedia telegram cli (ce el i ya bukan coli) yang selanjutnya kita sebut tg-cli.
+Nah, saya bermaksud membuat bot telegram menggunakan tg-cli yang akan run di raspi 3. So langkah pertama untuk keinginan saya tsb adalah bagaimana menjalankan tg-cli raspberry pi 3.
+Sebenarnya, di laman repo tg-cli yaitu https://github.com/vysheng/tg.git sudah dijelaskan bagaimana cara untuk kompilasi tg-cli sesuai dengan OS yang kita gunakan.</description>
+    </item>
+    
+    <item>
+      <title>Raspberry Pi 3 headless</title>
+      <link>/posts/2017-04-14-raspberry-pi-3-headless/</link>
+      <pubDate>Fri, 14 Apr 2017 19:39:08 +0700</pubDate>
+      
+      <guid>/posts/2017-04-14-raspberry-pi-3-headless/</guid>
+      <description>Yo&amp;hellip;bicara soal raspi 3 lagi. Dalam menggunakan raspi 3 mestinya membutuhkan perangkat tambahan untuk konfigurasi, minimal keyboard dan monitor. Bagaimana kalau kita tidak punya keduanya? pusing. Haha. Tenang, akan saya tulis bagaimana mengkonfigurasi raspi 3 meskipun tidak punya monitor sama keyboard untuk dipasang di raspi 3.
+Nah, pada artikel ini akan saya share: 1. Install Raspbian Lite. 2. Mengakses raspi 3 meskipun tidak punya monitor dan keyboard untuk raspi.</description>
     </item>
     
   </channel>

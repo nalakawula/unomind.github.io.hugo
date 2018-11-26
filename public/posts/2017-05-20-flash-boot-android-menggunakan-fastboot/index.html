@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Flash Boot Android Menggunakan Fastboot
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Flash Boot Android Menggunakan Fastboot</div>
+
+        
+<div class="section" id="content">
+    Sat May 20, 2017 &#183; 79 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Melanjutkan artikel <a href="/posts/2017-05-20-bongkar-boot.img-android-di-fedora-25">membongkar boot.img</a></p>
+
+<p>Sekarang akan saya bahas cara flash file <code>new-boot.img</code> yang telah dibuat, metode yang saya pakai adalah menggunakan <code>fastboot</code> karena sangat mudah.</p>
+
+<ul>
+<li>Aktifkan <code>usb debugging</code> di hp</li>
+<li>Tancapkan ke laptop</li>
+<li>Buka Terminal</li>
+<li><code>cd</code> ke lokasi new-boot.img</li>
+<li>reboot HP ke mode <code>fastboot</code></li>
+</ul>
+
+<pre><code>adb reboot-bootloader
+</code></pre>
+
+<ul>
+<li>Setelah muncul tulisan fastboot di layar HP, jalankan perintah ini:</li>
+</ul>
+
+<pre><code>fastboot flash boot new-boot.img
+</code></pre>
+
+<p>Hanya butuh beberapa detik untuk selesai</p>
+
+<ul>
+<li>Reboot HP</li>
+</ul>
+
+<pre><code>fastboot reboot
+</code></pre>
+
+<dl>
+<dt>Selamat, sekarang <code>/system</code> sudah termount dalam mode <code>rw</code></dt>
+</dl>
+
+<p>:+1:</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

@@ -3,58 +3,420 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/test-post/</loc>
-    <lastmod>2018-11-17T12:01:56+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/video-post/</loc>
-    <lastmod>2018-03-16T20:18:53-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/long-form-post/</loc>
-    <lastmod>2018-03-08T20:18:53-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/image-post/</loc>
-    <lastmod>2018-02-19T12:41:46-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/code-poetry/</loc>
-    <lastmod>2018-02-13T13:56:12-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/about/</loc>
     <lastmod>2018-02-13T13:42:49-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/</loc>
-    <lastmod>2018-02-13T12:21:57-05:00</lastmod>
+    <loc>/posts/2017-09-27-share-koneksi-internet-wifi-via-ethernet-di-arch-linux/</loc>
+    <lastmod>2017-09-27T19:39:08+07:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/dear-jane/</loc>
-    <lastmod>2018-02-11T12:34:41-05:00</lastmod>
+    <loc>/posts/2017-09-21-repositori-sublime-text-untuk-arch-linux/</loc>
+    <lastmod>2017-09-21T19:39:08+07:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/oh-alice/</loc>
-    <lastmod>2018-02-09T12:32:12-05:00</lastmod>
+    <loc>/posts/2017-09-20-postrouting-openwrt/</loc>
+    <lastmod>2017-09-20T19:39:08+07:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/a-poem/</loc>
-    <lastmod>2018-02-01T12:35:11-05:00</lastmod>
+    <loc>/posts/2017-09-19-tp-link-mr3420-v3-eu-wds-mode-dengan-firmware-lede/</loc>
+    <lastmod>2017-09-19T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-08-16-i3wm-second-display-only/</loc>
+    <lastmod>2017-08-16T20:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-08-16-debrick-tp-link-mr3420-v3-eu-yang-gagal-flash-firmware-berbasis-openwrt/</loc>
+    <lastmod>2017-08-16T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-08-16-install-firmware-berbasis-openwrt-di-tp-link-mr3420-v3-eu/</loc>
+    <lastmod>2017-08-16T19:20:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-08-14-mudah-download-xcode-9-beta-5-dengan-resume-support/</loc>
+    <lastmod>2017-08-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-07-27-laptop-dengan-kerusakan-pada-cpu-s-decoupling-capacitor/</loc>
+    <lastmod>2017-07-27T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-07-26-mengatasi-reminder-aktifasi-office-365-yang-muncul-berulang-ulang/</loc>
+    <lastmod>2017-07-26T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-07-17-mengatasi-galat-can-t-open-device-dev-ttyacm0-permission-denied-ketika-upload-program-ke-arduino-dari-arch-linux/</loc>
+    <lastmod>2017-07-17T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-07-16-akses-android-mtp-di-os-x/</loc>
+    <lastmod>2017-07-16T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-07-13-google-chrome-standalone-installer/</loc>
+    <lastmod>2017-07-13T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-07-13-mudah-mencari-driver-printer-canon-dengan-cepat/</loc>
+    <lastmod>2017-07-13T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-07-05-mudah-dualboot-remix-os-dengan-arch-linux/</loc>
+    <lastmod>2017-07-05T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-07-04-backup-partisi-root-arch-linux-menggunakan-gnome-disk/</loc>
+    <lastmod>2017-07-04T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-06-27-backup-bootloader-arch-linux/</loc>
+    <lastmod>2017-06-27T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-06-26-ada-yang-salah-dengan-idulfitri-ku/</loc>
+    <lastmod>2017-06-26T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-06-10-k-9-mail-dan-verifikasi-dua-langkah-google/</loc>
+    <lastmod>2017-06-10T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-29-menambah-indonesia-di-setting-region-language-arch-linux/</loc>
+    <lastmod>2017-05-29T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-27-jekyll-di-arch-linux/</loc>
+    <lastmod>2017-05-27T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-27-pacman-cheat-sheet/</loc>
+    <lastmod>2017-05-27T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-25-mengganti-akes-github-dari-https-ke-ssh/</loc>
+    <lastmod>2017-05-25T21:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-25-mencoba-layanan-netlify/</loc>
+    <lastmod>2017-05-25T20:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-25-menambah-tag-dalam-situs-jekyll/</loc>
+    <lastmod>2017-05-25T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-24-membuat-tautan-referensi-ke-artikel-lain-dalam-jekyll/</loc>
+    <lastmod>2017-05-24T15:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-22-memasang-wall-facelet-cat5e-panasonic/</loc>
+    <lastmod>2017-05-22T18:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-21-jekyll-plugin-untuk-atom/</loc>
+    <lastmod>2017-05-21T16:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-20-flash-boot-android-menggunakan-fastboot/</loc>
+    <lastmod>2017-05-20T23:00:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-20-disable-tombol-kapasitip-hp-android-rom-cm13-google-seed/</loc>
+    <lastmod>2017-05-20T22:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-20-bongkar-boot.img-android-di-fedora-25/</loc>
+    <lastmod>2017-05-20T21:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-20-atom-powerfull-markdown-editor-di-fedora-25/</loc>
+    <lastmod>2017-05-20T20:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-18-fedora-ala-ala-winten/</loc>
+    <lastmod>2017-05-18T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-17-membeli-nokia-150/</loc>
+    <lastmod>2017-05-17T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-16-menjaga-versi-kernel-tertentu-agar-tidak-terhapus-ketika-update-fedora/</loc>
+    <lastmod>2017-05-16T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-07-mencoba-oh-my-zsh/</loc>
+    <lastmod>2017-05-07T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-07-mencoba-zsh-di-fedora-25/</loc>
+    <lastmod>2017-05-07T18:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-04-27-memperbaiki-touchpad-error-di-fedora/</loc>
+    <lastmod>2017-04-27T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-04-17-memperbaiki-tampilan-emoji-di-gh-page/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-04-17-menambah-emoji-di-gh-page/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-04-18-menambah-tombol-navigasi-next-archive-previous-di-jekyll/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-04-25-menambah-tombol-navigasi-next-archive-previous-di-jekyll-bagian-ii/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-25-hari-yang-panas/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-09-30-mencoba-jekyll-admin/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-09-30-pengalalaman-belanja-di-aliexpress-pembayaran-menggunakan-debit-btn/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-10-01-setup-raspberry-pi-super-headless/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-10-17-mengatasi-error-import-gobject-ketika-menjalankan-hp-setup-di-arch-linux/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-10-24-mudah-bypass-password-windows-10/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-10-27-jekyll-trik-untuk-image-caption/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-10-29-mudah-konversi-skema-gpt-ke-mbr/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-11-05-telegram-desktop-multiple-instances/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-11-10-kde-yang-sekarang-bukan-kde-yang-dulu/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-11-24-virtualbox-mengatasi-nerwork-adapter-2-tidak-mendapatkan-ip-address-dari-dhcp-server/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-11-28-instalasi-microsoft-office-2010-di-debian-9/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-12-01-menautkan-kalender-google-ke-korganizer-kde/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-12-01-resize-aplikasi-microsoft-office-2010-di-wine/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-12-17-autocutoff-charging-menggunakan-arduino/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-01-18-aktivasi-windows-7-pro-oem-melalui-jalur-telepon/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-01-18-setup-vagrant-di-windows-7-pro-x64/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-01-29-client-to-server-c2s-port-forwarding-menggunakan-bitvise-ssh-client/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-02-02-kamera-bokeh-ala-ala-google-camera/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-03-19-mengganti-ip-standar-ics-windows-7/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-03-27-mencicipi-miui-global-dev/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-06-29-selamat-idulfitri/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-06-30-move-on-life-must-go-on/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-07-01-free-upgrade-windows-7-pro-oem-ke-windows-10/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-07-02-setelah-install-windows-10/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-09-17-shelter-isolate-your-big-brother-app-multiple-accounts/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-09-27-sailfish-os-untuk-mido/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-09-29-ekstrak-semua-tautan-dari-sebuah-website-menggunakan-lynx/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-09-29-embed-pesan-telegram-ke-post-jekyll/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-09-29-menjalankan-aplikasi-android-di-sailfish-os/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-10-09-bikin-distro-linux-menggunakan-rtc-daripada-utc/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-10-10-cek-badblock-pada-partisi-emmc-android/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-10-14-grub-remember-last-choice/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-11-08-batch-rename-files-extension-from-bash/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-04-14-meet-my-pi-3/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-04-16-menjalankan-tg-cli-di-raspberry-pi-3/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-04-14-raspberry-pi-3-headless/</loc>
+    <lastmod>2017-04-14T19:39:08+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/draft/2017-07-29-mengawinkan-usb-wifi-toshiba-wlm-20u2-a-dengan-wireless-router-hg553/</loc>
+  </url>
+  
+  <url>
+    <loc>/draft/2018-01-19-sakit-namun-tak-berdarah-bagian-i/</loc>
+  </url>
+  
+  <url>
+    <loc>/posts/2017-05-09-tes-travis-ci/</loc>
   </url>
   
   <url>
     <loc>/tags/blog/</loc>
-    <lastmod>2018-11-17T12:01:56+07:00</lastmod>
+    <lastmod>2017-09-27T19:39:08+07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -64,38 +426,25 @@
   </url>
   
   <url>
-    <loc>/tags/classic/</loc>
-    <lastmod>2018-02-11T12:34:41-05:00</lastmod>
+    <loc>/draft/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/code/</loc>
-    <lastmod>2018-03-08T20:18:53-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/poem/</loc>
-    <lastmod>2018-02-13T13:56:12-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/story/</loc>
-    <lastmod>2018-11-17T12:01:56+07:00</lastmod>
+    <loc>/posts/</loc>
+    <lastmod>2017-09-27T19:39:08+07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-11-17T12:01:56+07:00</lastmod>
+    <lastmod>2018-02-13T13:42:49-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2018-11-17T12:01:56+07:00</lastmod>
+    <lastmod>2017-09-27T19:39:08+07:00</lastmod>
     <priority>0</priority>
   </url>
   

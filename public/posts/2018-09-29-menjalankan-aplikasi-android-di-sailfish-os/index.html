@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title"></div>
+
+        
+<div class="section" id="content">
+    Fri Apr 14, 2017 &#183; 237 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Sistem operasi tanpa aplikasi, sungguh laksana piring tanpa nasi. Begitu juga dengan sailfish OS. Kesan pertama memakai sailfish OS &ldquo;WAW&rdquo;, gegas, gesture nikmat, konsisten, UI/UX yang mengesankan. Saya tidak sedang melebih-lebihkan, memang begitu yang saya rasakan. Dan yang paling mencengangkan adalah systemd yang dipakai. Cool.</p>
+
+<p>Sayang-seribu sayang, dukungan aplikasi di sailfish OS benar-benar minim. Maklum, sistem operasi minoritas. Siapa sih developer yang mau bikin aplikasi tanpa pangsa pasar yang jelas? Wasting time. Hal tersebut yang kemudian mengilhami developer untuk membenamkan dukungan android ke sailfish OS, melalui <strong>aliendalvik</strong>. Penasaran? sama. Sayangnya, kita mesti membeli lisensi untuk hal tersebut <em>sad emoticon</em>.</p>
+
+<p>Hampir putus asa, tapi ada kabar bahwa ada beberapa individu yang berhasil menjalankan aliendalvik di sailfish port. Ada harapan, setelah mengarungi dalamnya forum talk maemo, akhirnya saya bisa run aliendalvik di sailfish. Berikut ini langkah-langkah yang saya tempuh:
+1. Tentu saja memasang sailfish OS
+2. Dump paket aliendalvik dan dependensinya dari official device, saya dump dari xperia X yang sudah terpasang aliendalik (lebih tepatnya, minta ke pemilik device ini).
+3. SSH ke device sailfish kita</p>
+
+<pre><code>ssh nemo@192.168.2.15
+</code></pre>
+
+<ol>
+<li>Masuk ke mode root
+<code>
+devel-su
+</code></li>
+<li>Masuk ke direktori hasil dump aliendalvik, nstall paket secara serentak, pernah coba satu-satu error.
+<code>
+zypper in *.rpm
+</code></li>
+<li>sesuaikan isi <code>/opt/alien/system/script/</code> dengan device kita.</li>
+<li>rename <code>/etc/media_platform.xml</code></li>
+<li>run service aliendalvik <code>systemctl start aliendalvik</code></li>
+</ol>
+
+<p>Kalau sukses, bisa install apk. Saya telah coba install whatsapp dan tekegram X, fdroid, dan yalp. Semua berjalan lancar.
+<script async src="https://telegram.org/js/telegram-widget.js?4" data-telegram-post="unomindgithubio/5" data-width="100%" data-userpic="false"></script></p>
+
+<p>Log aliendalvik yang berhasil run: <a href="https://del.dog/logad-1.diff">https://del.dog/logad-1.diff</a></p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

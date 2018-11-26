@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        i3wm Second Display Only
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">i3wm Second Display Only</div>
+
+        
+<div class="section" id="content">
+    Wed Aug 16, 2017 &#183; 219 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Sudah 3 hari saya memakai i3wm di mesin arch linux saya. Bukan apa-apa sih, hanya iseng saja. Kebetulan hari ini, saya menghubungkan mesin ke external monitor yang resolusinya lebih besar yaitu 1440x900.</p>
+
+<p>Sempat bingung, bagaimana caranya agar display di laptop mati, dan eksternal display ON karena secara default saya berada dalam mode <em>mirror</em>. Ternyata caranya cukup simple.</p>
+
+<ul>
+<li>jalankan <code>xrandr</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell-script" data-lang="shell-script">[sumarsono@mesin-arch ~]$ xrandr
+Screen 0: minimum 8 x 8, current 1440 x 900, maximum 32767 x 32767
+LVDS1 connected primary (normal left inverted right x axis y axis)
+   1280x800      59.99 +  50.00  
+   1024x768      60.00  
+   800x600       60.32    56.25  
+   640x480       59.94  
+   640x400       60.00  
+DP1 disconnected (normal left inverted right x axis y axis)
+DP2 disconnected (normal left inverted right x axis y axis)
+DP3 disconnected (normal left inverted right x axis y axis)
+HDMI1 disconnected (normal left inverted right x axis y axis)
+HDMI2 disconnected (normal left inverted right x axis y axis)
+VGA1 connected 1440x900+0+0 (normal left inverted right x axis y axis) 420mm x 260mm
+   1440x900      59.90*+
+   1280x1024     60.02  
+   1280x800      59.81  
+   1152x864      75.00  
+   1280x720      60.00  
+   1024x768      75.03    60.00  
+   832x624       74.55  
+   800x600       75.00    60.32    56.25  
+   640x480       75.00    59.94  
+   720x400       70.08  
+VIRTUAL1 disconnected (normal left inverted right x axis y axis)
+[sumarsono@mesin-arch ~]$</code></pre></div>
+<ul>
+<li>jalankan perintah berikut agar VGA1 hidup dab LVDS1 Matikan</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell-script" data-lang="shell-script">xrandr --output VGA1 --mode 1440x900 --output LVDS1 --off</code></pre></div>
+<ul>
+<li>Profit !</li>
+</ul>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

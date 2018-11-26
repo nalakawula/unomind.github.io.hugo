@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        can&#39;t open device /dev/ttyACM0: Permission denied Ketika Upload Program Arduino dari Arch Linux
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">can&#39;t open device /dev/ttyACM0: Permission denied Ketika Upload Program Arduino dari Arch Linux</div>
+
+        
+<div class="section" id="content">
+    Mon Jul 17, 2017 &#183; 131 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Ceritanya, malam ini saya mendapat rongsokan <code>Arduino Mega 250</code> dari tukang rongsokan, secara <em>free</em> alias gratis. Namanya barang gratis, kalau normal ya Alhamdulillah, kalau rusak ya sudah tidak mengapa.</p>
+
+<p>Langsung ambil kabel USB dan tancap ke mesin Arch Linux. Si Arduino ini, sifatnya <em>masukan dan mainkan</em> ketika dipasang di mesin berbasis GNU/Linux. Langsung terdeteksi sebagai:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">Bus <span style="color:#ae81ff">006</span> Device <span style="color:#ae81ff">004</span>: ID <span style="color:#ae81ff">2341</span>:0042 Arduino SA Mega <span style="color:#ae81ff">2560</span> R3 <span style="color:#f92672">(</span>CDC ACM<span style="color:#f92672">)</span></code></pre></div>
+<p>Dulu, ketika masih menggunakan Ubuntu, saya harus membuat <code>udev rule</code> untuk proses baca tulis ke Arduino. Bagaimana dengan Arch Linux? Saya coba langsung <em>fire in the hole</em> saja pakai aplikasi <code>Arduino IDE</code>. Eh..muncul error:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">can<span style="color:#960050;background-color:#1e0010">&#39;</span>t open device <span style="color:#e6db74">&#34;/dev/ttyACM0&#34;</span>: Permission denied</code></pre></div>
+<p>Solusinya mudah saja, tinggal masukin aja user kita ke group <code>uucp</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo usermod -a -G uucp</code></pre></div>
+<p>Coba upload lagi programnya, dan tara&hellip;berhasil&hellip;</p>
+
+<p>Terimakasih</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

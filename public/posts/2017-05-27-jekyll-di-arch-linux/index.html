@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Jekyll di Arch Linux
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Jekyll di Arch Linux</div>
+
+        
+<div class="section" id="content">
+    Sat May 27, 2017 &#183; 126 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <ul>
+<li>Kamis, 25 Mei 2017 saya melakukan pemasangan Arch Linux untuk menggantikan Fedora 25.</li>
+<li>Jumat, 26 Mei 2017, Arch Linux di mesin saya, sudah siap digunakan.</li>
+<li>Sabtu, 27 Mei 2017, Saya ingin melanjutkan penulisan artikel untuk <a href="https://www.sumarsono.id">sumarsono.id</a></li>
+</ul>
+
+<p><a href="https://www.sumarsono.id">sumarsono.id</a> (domain sudah mati, hehe) ini dibangun menggunakan Jekyll, maka saya perlu setup jekyll untuk mesin Arch Linux saya. Berikut ini, langkah-langkahnya:</p>
+
+<ol>
+<li><p>Install <code>ruby</code> karena kita butuh <code>RubyGems</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo pacman -S ruby</code></pre></div></li>
+
+<li><p>Selanjutnya edit <code>.bashrc</code> dan tambahkan:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell-script" data-lang="shell-script">PATH=&#34;$(ruby -e &#39;print Gem.user_dir&#39;)/bin:$PATH&#34;</code></pre></div></li>
+
+<li><p>restart terminal</p></li>
+
+<li><p>Update paket <code>gem</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gem update</code></pre></div></li>
+
+<li><p>Install <code>bundler</code> dan <code>jekyll</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gem install jekyll bundler</code></pre></div></li>
+
+<li><p>Masuk ke direktori <em>static site</em> milik kita dan install paket yang diperlukan:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bundle install</code></pre></div></li>
+
+<li><p>Setelah selesai, coba run <em>static site</em> kita secara lokal</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bundle exec jekyll serve</code></pre></div></li>
+</ol>
+
+<p>Kalau berhasil run, berarti sudah beres. :+1:</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

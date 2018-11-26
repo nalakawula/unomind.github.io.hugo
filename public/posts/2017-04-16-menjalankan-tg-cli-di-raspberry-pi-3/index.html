@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Menjalankan Tg CLI di Raspberry Pi 3
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Menjalankan Tg CLI di Raspberry Pi 3</div>
+
+        
+<div class="section" id="content">
+    Fri Apr 14, 2017 &#183; 242 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    
+
+<p>Telegram, platform chat yang cukup populer. Ada yang menarik dari telegram ini, yaitu tersedia telegram cli (ce el i ya bukan coli) yang selanjutnya kita sebut tg-cli.</p>
+
+<p>Nah, saya bermaksud membuat bot telegram menggunakan tg-cli yang akan run di raspi 3. So langkah pertama untuk keinginan saya tsb adalah bagaimana menjalankan tg-cli raspberry pi 3.</p>
+
+<p>Sebenarnya, di laman repo tg-cli yaitu <a href="https://github.com/vysheng/tg.git">https://github.com/vysheng/tg.git</a> sudah dijelaskan bagaimana cara untuk kompilasi tg-cli sesuai dengan OS yang kita gunakan. Tapi eh tapi tadi waktu saya praktekan, ada kendala error <code>Can not connect (tgl/mtproto-utils.c:101: BN2ull: Assertion</code>0&rsquo; failed)`. Jadi saya tulis ulang aja disini beserta cara fix-nya.</p>
+
+<h2 id="you-will-need">You will need</h2>
+
+<p><strong>Working internet connection</strong> :laughing:</p>
+
+<h2 id="check-this-out">Check this out</h2>
+
+<ol>
+<li>of course <code>ssh</code> ke raspberry pi 3 kamu.</li>
+<li>clone repo tg-cli ke raspberry pi 3.
+<code>shell
+git clone --recursive https://github.com/vysheng/tg.git
+</code></li>
+<li>Pindah ke direktori hasil clone tadi
+<code>shell
+cd tg
+</code></li>
+
+<li><p>Edit file <code>tg/tgl/mtproto-utils.c</code> untuk ngatasin error yang tadi saya sebutkan</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">nano tgl/mtproto-utils.c</code></pre></div>
+<p>Cari <code>assert (0); // As long as nobody ever uses this code, assume</code> yang berada pada <strong>line 101 dan 115</strong> , comment kedua baris tsb.</p></li>
+
+<li><p>Pasang dependensi yang dibutuhkan</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev libjansson-dev libpython-dev make</code></pre></div></li>
+
+<li><p>Jalankan perintah berikut ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./configure
+make</code></pre></div></li>
+
+<li><p>Kalau sudah selesai, coba jalankan tg-cli</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bin/telegram-cli -k tg/tg-server.pub -W</code></pre></div></li>
+
+<li><p>Masukan nomor HP dan tara&hellip;.selesai. Tg-cli siap digunakan.</p></li>
+</ol>
+
+<p>Nah itu tadi tentang apa yang saya lakukan, jangan tanya kenapa kok gini kenapa kok gitu, ini maksudnya apa, dst. Karena saya tidak mudeng. wkwkwk</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title"></div>
+
+        
+<div class="section" id="content">
+    Fri Apr 14, 2017 &#183; 173 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    
+
+<p>Pagi ini, ketika saya mau setup printer merk HP muncul error seperi berikut ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#f92672">[</span>sumarsono@mesin-arch ~<span style="color:#f92672">]</span>$ hp-setup 
+
+HP Linux Imaging and Printing System <span style="color:#f92672">(</span>ver. <span style="color:#ae81ff">3</span>.17.9<span style="color:#f92672">)</span>
+Printer/Fax Setup Utility ver. <span style="color:#ae81ff">9</span>.0
+
+Copyright <span style="color:#f92672">(</span>c<span style="color:#f92672">)</span> <span style="color:#ae81ff">2001</span>-15 HP Development Company, LP
+This software comes with ABSOLUTELY NO WARRANTY.
+This is free software, and you are welcome to distribute it
+under certain conditions. See COPYING file <span style="color:#66d9ef">for</span> more details.
+
+Traceback <span style="color:#f92672">(</span>most recent call last<span style="color:#f92672">)</span>:
+  File <span style="color:#e6db74">&#34;/usr/bin/hp-setup&#34;</span>, line <span style="color:#ae81ff">313</span>, in &lt;module&gt;
+    ui <span style="color:#f92672">=</span> import_module<span style="color:#f92672">(</span>ui_package + <span style="color:#e6db74">&#34;.setupdialog&#34;</span><span style="color:#f92672">)</span>
+  File <span style="color:#e6db74">&#34;/usr/lib/python3.6/importlib/__init__.py&#34;</span>, line <span style="color:#ae81ff">126</span>, in import_module
+    <span style="color:#66d9ef">return</span> _bootstrap._gcd_import<span style="color:#f92672">(</span>name<span style="color:#f92672">[</span>level:<span style="color:#f92672">]</span>, package, level<span style="color:#f92672">)</span>
+  File <span style="color:#e6db74">&#34;&lt;frozen importlib._bootstrap&gt;&#34;</span>, line <span style="color:#ae81ff">978</span>, in _gcd_import
+  File <span style="color:#e6db74">&#34;&lt;frozen importlib._bootstrap&gt;&#34;</span>, line <span style="color:#ae81ff">961</span>, in _find_and_load
+  File <span style="color:#e6db74">&#34;&lt;frozen importlib._bootstrap&gt;&#34;</span>, line <span style="color:#ae81ff">950</span>, in _find_and_load_unlocked
+  File <span style="color:#e6db74">&#34;&lt;frozen importlib._bootstrap&gt;&#34;</span>, line <span style="color:#ae81ff">655</span>, in _load_unlocked
+  File <span style="color:#e6db74">&#34;&lt;frozen importlib._bootstrap_external&gt;&#34;</span>, line <span style="color:#ae81ff">678</span>, in exec_module
+  File <span style="color:#e6db74">&#34;&lt;frozen importlib._bootstrap&gt;&#34;</span>, line <span style="color:#ae81ff">205</span>, in _call_with_frames_removed
+  File <span style="color:#e6db74">&#34;/usr/share/hplip/ui5/setupdialog.py&#34;</span>, line <span style="color:#ae81ff">31</span>, in &lt;module&gt;
+    from base import device, utils, models, pkit
+  File <span style="color:#e6db74">&#34;/usr/share/hplip/base/pkit.py&#34;</span>, line <span style="color:#ae81ff">38</span>, in &lt;module&gt;
+    from gi import _gobject as gobject
+ImportError: cannot import name <span style="color:#e6db74">&#39;_gobject&#39;</span></code></pre></div>
+<h3 id="solusi">Solusi</h3>
+
+<p>Sangat mudah, cukup install <code>python-gobject</code> sudah beres.</p>
+
+<p>Profit, happy printing.</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>

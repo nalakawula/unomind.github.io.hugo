@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+
+<meta name="description" content="This is my personal blog">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="/">
+
+<meta name="twitter:image" content="/tn.png">
+<meta name="twitter:title" property="og:title" itemprop="title name" content="Sumarsono">
+<meta name="twitter:description" property="og:description" itemprop="description" content="This is my personal blog">
+<meta name="og:type" content="website">
+<meta name="og:url" content="/">
+<meta name="og:image" itemprop="image primaryImageOfPage" content="/tn.png">
+
+<link rel="shortcut icon" href="/sam.ico" id="favicon">
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
+
+
+    
+
+    
+    
+    
+    <title>
+        
+        Memperbaiki Touchpad Error di Fedora
+        
+    </title>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="section" id="title">Memperbaiki Touchpad Error di Fedora</div>
+
+        
+<div class="section" id="content">
+    Thu Apr 27, 2017 &#183; 169 words
+    
+    <div class="tag-container">
+        
+        <span class="tag">
+            <a href="/tags/blog">
+                blog
+            </a>
+        </span>
+        
+    </div>
+    
+    <hr/>
+    <p>Beberapa waktu yang lalu, saya jenuh dengan <strong>GNOME</strong>. Oleh sebab itu saya memasang <strong>PLASMA</strong>.
+Namun apa daya, itu hanya pelarian sesaat. Akhirnya saya memutuskan untuk membuang plasma dan kembali ke gnome.</p>
+
+<p>Proses balikan ini tidak berjalan mulus, setelah saya remove plasma kemudian set <code>gdm</code> over <code>sddm</code> kemudian reboot, startx gagal start. Hal ini disebabkan karena komponen gnome ada yang hilang terbawa plasma yang saya buang. Okelah tidak apa-apa, saya install gnome lagi. Kemudian reboot dan jreng masuk ke Desktop. Senangnya, bisa balikan ke gnome.</p>
+
+<p>Namun ternyata, cobaan untuk balikan masih ada. Semua lancar ketika di  <code>wayland</code> session, namun karena saya belum sreg, saya switch ke <code>Xorg</code> session. Disini masalah muncul lagi, Touchpadnya hanya bisa klik kanan dan klik kiri, tidak bisa move kursor. <em>WTF</em> dalam hati.</p>
+
+<p>Sudah pusing, saya putuskan cari solusi di pegelinux. Disana, disarankan untuk memasang <code>Xorg-libinput</code> karena diduga paket itu belum terpasang. Hmmm masuk akal, oke saya pasang di fedora dengan cara:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">sudo dnf install xorg-x11-drv-libinput</code></pre></div>
+<p>dan jreng, bisa. Wow, awesome. :laughing:</p>
+
+<p>Terima kasih pegelinux&hellip;.. :+1:</p>
+
+</div>
+
+
+        
+<div class="section bottom-menu">
+    
+<hr />
+<p>
+
+
+    
+        <a href="/posts">back</a>
+        
+            &#183;
+        
+    
+
+    
+        
+            <a href="/posts">
+                Alway learning
+            </a>
+        
+    
+    
+        
+            &#183; 
+            <a href="/posts">
+                by doing
+            </a>
+        
+            &#183; 
+            <a href="/about">
+                who am I?
+            </a>
+        
+    
+    &#183; 
+    <a href="/">
+        main
+    </a>
+
+</p>
+</div>
+
+
+        <div class="section footer">I&rsquo;m Sumarsono, call me Sumar.</div>
+    </div>
+</body>
+
+</html>
