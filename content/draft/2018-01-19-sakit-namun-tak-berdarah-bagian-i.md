@@ -1,0 +1,5 @@
+"Manusia, mahluk sosial". Begitu yang diucapkan oleh salah satu guru sekolah dasar saya. Saya tidak memungkiri pernyataan tersebut. Hidup ini jadi terasa lebih berarti ketika kita menghabiskan waktu dengan orang-orang sekitar kita. Berbincang, bercanda, tertawa, kadang sederhana namun begitu mengena. Sayangnya hampir setiap hal yang ada di bumi ini tercipta berpasang-pasangan. Ada tawa, ada tangis. Ada suka, ada duka. Menjalin hubungan sosial, memang menyenangkan, membuat bahagia, namun bukan tanpa resiko. Pasti akan tiba waktu hubungan sosial menjadikan hal yang sebaliknya. Menimbulkan luka, sakit, duka. Luka tak selalu berdarah, begitu menyakitkan, namun kasat mata.
+
+Dalam tulisan ini, saya mau berbagi luka, sakit yang tak berdarah. Saya punya teman, dia sangat baik. Saya sering mendapat pertolongan dari dia. Menyenangkan mempunyai teman seperti dia. Lambat laun, pertemanan itu menimbulkan luka. Suatu hari dia butuh pertolongan dan saya tidak mampu menolongnya. Benar-benar menyakitkan.
+
+Sungguh menyakitkan ketika kita tidak mampu membalas kebaikan orang lain disaat orang tersebut membutuhkan.

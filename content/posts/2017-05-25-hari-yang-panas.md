@@ -1,0 +1,9 @@
+---
+title: 
+date: 2017-04-14T19:39:08+07:00
+showDate: true
+draft: false
+tags: ["blog"]
+---
+
+Hari yang panas, melelehkan daku.
