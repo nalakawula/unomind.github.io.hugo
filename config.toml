@@ -31,7 +31,7 @@ pygmentsCodefences      = true
     text = "Alway learning"
 
 [[params.mainMenu]]
-    link = "/post"
+    link = "/posts"
     text = "by doing"
 
 [[params.mainMenu]]
