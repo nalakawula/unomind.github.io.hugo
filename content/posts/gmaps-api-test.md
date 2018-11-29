@@ -6,5 +6,13 @@ draft: false
 tags: ["blog"]
 ---
 Cek peta:
- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB73BzNYohKRTqDMrLP4yUfyJ_-nGWkasg
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB73BzNYohKRTqDMrLP4yUfyJ_-nGWkasg
 &callback=initMap" type="text/javascript"></script>
+
+<iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB73BzNYohKRTqDMrLP4yUfyJ_-nGWkasg
+    &q=Space+Needle,Seattle+WA" allowfullscreen>
+</iframe>
