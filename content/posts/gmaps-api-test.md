@@ -5,16 +5,20 @@ showDate: true
 draft: false
 tags: ["blog"]
 ---
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB73BzNYohKRTqDMrLP4yUfyJ_-nGWkasg&callback=myMap"></script>
+<div id="map" style="width:100%;height:400px;background:yellow"></div>
 
 <script>
 function myMap() {
-var mapProp= {
-    center:new google.maps.LatLng(51.508742,-0.120850),
-    zoom:5,
-};
-var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var uluru = {lat: -26.999933, lng: 132.997309}; 
+    var map = new google.maps.Map(document.getElementById("map"), { 
+      zoom: 5, 
+      center: uluru 
+    }); 
+    var marker = new google.maps.Marker({ 
+      position: uluru, 
+      map: map 
+    }); 
 }
 </script>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB73BzNYohKRTqDMrLP4yUfyJ_-nGWkasg&callback=myMap"></script>
 
