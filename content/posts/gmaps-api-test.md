@@ -5,14 +5,15 @@ showDate: true
 draft: false
 tags: ["blog"]
 ---
-Cek peta:
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB73BzNYohKRTqDMrLP4yUfyJ_-nGWkasg
-&callback=initMap" type="text/javascript"></script>
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
 
-<iframe
-  width="600"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB73BzNYohKRTqDMrLP4yUfyJ_-nGWkasg
-    &q=Space+Needle,Seattle+WA" allowfullscreen>
-</iframe>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB73BzNYohKRTqDMrLP4yUfyJ_-nGWkasg&callback=myMap"></script>
+
