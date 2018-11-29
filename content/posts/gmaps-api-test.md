@@ -9,7 +9,7 @@ tags: ["blog"]
 
 <script>
 function myMap() {
-    var uluru = {lat: -26.999933, lng: 132.997309}; 
+    var uluru = {lat: -7.5457442, lng: 110.7995443,21}; 
     var map = new google.maps.Map(document.getElementById("map"), { 
       zoom: 5, 
       center: uluru 
