@@ -27,11 +27,13 @@ pygmentsCodefences      = true
     primaryImage        = "tn.png"                     # Image that shows on Twitter cards and OpenGraph links
 
 [[params.mainMenu]]
+    #link = "/posts"
     link = "https://unomind.github.io"
     text = "Always learning"
 
 [[params.mainMenu]]
-    link = "/posts"
+    #link = "/posts"
+    link = "https://github.com/unomind"
     text = "by doing"
 
 [[params.mainMenu]]
