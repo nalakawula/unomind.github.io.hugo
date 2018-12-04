@@ -9,8 +9,8 @@ pygmentsCodefences      = true
 # googleAnalytics         = ""             # Tracking code, eg. "UA-111111111-1"
 
 [params]
-    dateform            = "Mon Jan 02, 2006"
-    dateformfull        = "Mon Jan 2 2006 15:04:05 EST"
+    dateform            = "Mon Sep 02, 2018"
+    dateformfull        = "Mon Sep 2 2018 15:04:05 EST"
     favicon             = "sam.ico"
     homepage            = "main"                        # What to call the home page link
     galleryFolder       = "images/"                     # Where you've put your images, after "/content/gallery/"
@@ -27,7 +27,7 @@ pygmentsCodefences      = true
     primaryImage        = "tn.png"                     # Image that shows on Twitter cards and OpenGraph links
 
 [[params.mainMenu]]
-    link = "/posts"
+    link = "https://unomind.github.io"
     text = "Always learning"
 
 [[params.mainMenu]]
