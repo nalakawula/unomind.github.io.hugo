@@ -9,6 +9,6 @@ Aku ~~binatang jalang~~. Sejak 2010 orang-orang memanggilku Mas Uno, tapi aku bu
 
 Sekarang, aku ini sysadmin di sebuah perusaan IT di Solo, diamanahi untuk mengurus server Centos, Debian dan AMI.
 
-~~Kalau mau nawarin job,~~ feel free to contact me at [`Telegram`](https://t.me/nalakawula). Oh iya, if you think this site is worth to follow, just click this [`subscribe link`](content/feed.xml) to get its RSS feed.
+~~Kalau mau nawarin job,~~ feel free to contact me at [`Telegram`](https://t.me/nalakawula). Oh iya, if you think this site is worth to follow, just click this [`subscribe link`](https://unomind.github.io/feed.xml) to get its RSS feed.
 
 Kalian juga boleh share semua artikel yang ada disini karena articles on this site are licensed as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
