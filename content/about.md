@@ -10,3 +10,4 @@ Aku ~~binatang jalang~~. Sejak 2010 orang-orang memanggilku Mas Uno, tapi aku bu
 Sekarang, aku ini sysadmin di sebuah perusaan IT di Solo, diamanahi untuk mengurus server Centos, Debian dan AMI.
 
 ~~Kalau mau nawarin job,~~ feel free to contact me at [`Telegram`](https://t.me/nalakawula). Kalian juga boleh share semua artikel yang ada disini karena articles on this site are licensed as [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+<script async src="https://comments.app/js/widget.js?2" data-comments-app-website="4A9AJtRd" data-limit="5"></script>
